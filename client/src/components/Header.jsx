@@ -42,17 +42,17 @@ const Header = () => {
               </div>
             </div>
             {/* theme switcher */}
-            {/* <div
+            <div
               className="flex items-center gap-1 cursor-pointer"
               onClick={() => {
-                dispatch(themeSwitcher());
+                // dispatch(themeSwitcher());
                 console.log({isDarkMood})
               }}
             >
               <div className="flex items-center">
                 <BsSunFill />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
