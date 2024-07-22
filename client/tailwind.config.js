@@ -5,6 +5,7 @@ export default {
     colors: {
       "transparent": 'transparent',
       "dark-dark": "#101012",
+
       "dark-light": "#17181a",
       "light-light": "#cacacc",
       "light-dark": "#b1b1b3", 
@@ -12,7 +13,10 @@ export default {
       "dark-btn-color-hover": "#373738",
       "light-btn-color": "#9d9d9e",
       "light-btn-color-hover": "#a7a7a8",
-      "orange-border-color": "#e84505"
+      "orange-border-color": "#de0437",
+      // text color
+      // light
+      "light-dark-dark-text-color": "#8f8f8f"
     },
     extend: {},
   },
