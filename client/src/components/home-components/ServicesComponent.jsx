@@ -52,7 +52,7 @@ const ServicesComponent = () => {
         ]
     })
   return (
-    <div className='bg-dark-dark text-light-dark py-10'>
+    <div className='bg-dark-dark text-light-dark py-24'>
         {/* max-content */}
         <div className='max-width-container'>
             {/* content */}
@@ -61,7 +61,7 @@ const ServicesComponent = () => {
                 <div className='max-w-[600px] mx-auto flex flex-col items-center'>
                     {/* small title */}
                     <div>
-                        <div className='flex items-center justify-center text-xs font-bllack text-orange-border-color'>
+                        <div className='flex items-center justify-center text-xs text-orange-border-color'>
                             <span>SERVICES</span>
                         </div>
                     </div>

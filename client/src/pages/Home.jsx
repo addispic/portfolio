@@ -6,6 +6,8 @@ import React from "react";
 import HomeFirstOrderComponent from "../components/home-components/HomeFirstOrderComponent";
 // service component
 import ServicesComponent from "../components/home-components/ServicesComponent";
+// about me
+import AboutMe from "../components/home-components/AboutMe";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <HomeFirstOrderComponent />
       {/* services */}
       <ServicesComponent />
+      {/* about me */}
+      <AboutMe />
     </div>
   );
 };
