@@ -128,14 +128,14 @@ const HomeFirstOrderComponent = () => {
           <div>
             <p className="font-black text-2xl sm:text-3xl md:text-4xl mb-5">
               I am <span className="text-light-dark font-normal">Addis</span>{" "}
-              <span className="text-light-dark font-normal">Fanta</span>
+              <span className="text-light-dark font-normal">Fenta</span>
             </p>
           </div>
           {/* paragraph */}
           <div className="w-[100%] md:w-[50%] mb-9">
             <p className="text-light-dark">
               Hi, I'm Addis <span className="font-black">MERN</span> stack developer with excellent
-              experience on both frontend and backend development
+              experience on both frontend and backend development.
             </p>
           </div>
           {/* buttons */}
