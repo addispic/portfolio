@@ -37,7 +37,7 @@ const MessageMe = () => {
           <div className="absolute z-50 left-1/2 bottom-[-24px] -translate-x-1/2 flex items-center gap-x-3">
             <div className="border px-2 pt-1.5 py-0.5 rounded-tl-md rounded-br-md bg-dark-dark text-[.875rem]">
               <textarea
-                className="w-[280px] h-[24px] max-h-[200px] focus:outline-none focus:ring-0 bg-transparent border-none resize-none p-0"
+                className="w-[200px] sm:w-[280px] h-[24px] max-h-[200px] focus:outline-none focus:ring-0 bg-transparent border-none resize-none p-0"
                 name=""
                 id="message-input-text-area"
                 placeholder="your message . . . "

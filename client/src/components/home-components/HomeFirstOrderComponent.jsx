@@ -76,7 +76,7 @@ const HomeFirstOrderComponent = () => {
         {/* intro */}
         <div className="py-5 sm:py-10 md:py-16 relative z-50">
           {/* social links */}
-          <div className="flex items-center justify-start gap-x-7 mt-5 sm:mt-10 md:mt-16 mb-5">
+          <div className="flex items-center justify-start gap-x-3 sm:gap-x-5 md:gap-x-7 mt-5 sm:mt-10 md:mt-16 mb-5">
             {socialLinks?.linksOption?.map((linkItem) => {
               return (
                 <div key={linkItem?.id} className="relative">
@@ -137,9 +137,9 @@ const HomeFirstOrderComponent = () => {
             </p>
           </div>
           {/* buttons */}
-          <div className="flex items-center gap-5 mb-5">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5 mb-5">
             {/* cv */}
-            <div>
+            <div className="w-max">
               <NavLink>
                 <div className="flex items-center justify-center gap-1 border border-orange-border-color px-3 rounded-full py-0.5 transition-colors ease-in-out duration-300 hover:bg-light-light text-light-dark hover:text-dark-dark hover:border-light-light">
                   {/* text */}
@@ -154,7 +154,7 @@ const HomeFirstOrderComponent = () => {
               </NavLink>
             </div>
             {/* certificates */}
-            <div className="flex items-center justify-center gap-1 px-3 py-0.5 rounded-full bg-light-light text-dark-light border border-light-light transition-colors ease-in-out duration-300 hover:border-orange-border-color hover:bg-dark-light hover:text-light-dark cursor-pointer">
+            <div className="w-max flex items-center justify-center gap-1 px-3 py-0.5 rounded-full bg-light-light text-dark-light border border-light-light transition-colors ease-in-out duration-300 hover:border-orange-border-color hover:bg-dark-light hover:text-light-dark cursor-pointer">
               {/* text */}
               <div>
                 <span>CERTIFICATES</span>

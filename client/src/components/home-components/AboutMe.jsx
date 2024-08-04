@@ -41,13 +41,13 @@ const AboutMe = () => {
           {/* image and text */}
           <div className="mt-10 flex gap-x-5">
             {/* image */}
-            <div className="w-[45%] flex items-center justify-center">
+            <div className="hidden sm:flex sm:w-[45%] items-center justify-center">
                 <div className="max-w-[200px] ">
                     <img className="w-full h-full object-center object-cover" src="https://www.transparentpng.com/thumb/man/rTkJ7v-man-png-image.png" alt="" />
                 </div>
             </div>
             {/* text */}
-            <div className="w-[55%]">
+            <div className="w-[100%] sm:w-[55%]">
               {/* hi there */}
               <div className="text-2xl font-bold">
                 <h1>Hi There</h1>
