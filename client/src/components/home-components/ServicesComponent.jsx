@@ -35,7 +35,7 @@ const ServicesComponent = () => {
         icon: BsDatabaseFillGear,
         title: "DB Management",
         description:
-          "Extensive experience working with various database technologies, including SQL and NoSQL systems",
+          "Extensive experience working with various database technologies, including SQL and NoSQL systems.",
       },
       {
         icon: ImAndroid,
@@ -47,13 +47,13 @@ const ServicesComponent = () => {
         icon: GrServerCluster,
         title: "Backend Development",
         description:
-          "Developing powerful, scalable backend APIs using cutting-edge technologies like Node.js and Python",
+          "Developing powerful, scalable backend APIs using cutting-edge technologies like Node.js and Python.",
       },
       {
         icon: FaGraduationCap,
         title: "Tutoring",
         description:
-          "In addition to technical services, I also offer personalized tutoring to help individuals and teams enhance their web development skills",
+          "In addition to technical services, I also offer personalized tutoring to help individuals and teams enhance their web development skills.",
       },
     ],
   });
