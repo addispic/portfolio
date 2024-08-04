@@ -3,6 +3,10 @@ import React, { useState } from "react";
 // icons
 // send
 import { FiSend } from "react-icons/fi";
+// phone
+import { BsFillTelephoneFill } from "react-icons/bs";
+// email
+import { MdEmail } from "react-icons/md";
 
 const MessageMe = ({bottomReference}) => {
   // message
@@ -61,6 +65,25 @@ const MessageMe = ({bottomReference}) => {
             </div>
           </div>
         </div>
+          {/* contact me */}
+          <div className="flex items-center justify-center pt-12">
+            <div className="flex items-center justify-center gap-x-3">
+              {/* phone */}
+              <div className="flex items-center gap-x-1 text-xs text-light-dark-dark-text-color">
+                {/* icon */}
+                <BsFillTelephoneFill />
+                {/* text */}
+                <span>+215905915180</span>
+              </div>
+              {/* email */}
+              <div className="flex items-center gap-x-1 text-xs text-light-dark-dark-text-color">
+                {/* icon */}
+                <MdEmail />
+                {/* text */}
+                <span>addisfun7@gmail.com</span>
+              </div>
+            </div>
+          </div>
       </div>
         <div ref={bottomReference} />
     </div>

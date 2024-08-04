@@ -1,12 +1,52 @@
-import React from "react";
+import React,{useState} from "react";
+import { v4 as uuidv4 } from "uuid";
 import { useSelector } from "react-redux";
+
+// icons
+// react
+import { FaReact } from "react-icons/fa";
+// django
+import { TbBrandDjango } from "react-icons/tb";
+// tailwind
+import { RiTailwindCssFill } from "react-icons/ri";
+// flutter
+import { RiFlutterFill } from "react-icons/ri";
 
 // states from slice
 import { selectIsDarkMood } from "../../features/theme-feature/themeSlice";
 
+
 const AboutMe = () => {
   // slice states
   const isDarkMood = useSelector(selectIsDarkMood);
+
+  // skills
+  const [skills,setSkills] = useState([
+    {
+      icon: FaReact,
+      title: "React & NextJS",
+      text: "JavaScript",
+      id: uuidv4(),
+    },
+    {
+      icon: RiTailwindCssFill,
+      title: "TailwindCSS",
+      text: "CSS",
+      id: uuidv4(),
+    },
+    {
+      icon: TbBrandDjango,
+      title: "Django",
+      text: "Python",
+      id: uuidv4(),
+    },
+    {
+      icon: RiFlutterFill,
+      title: "Flutter",
+      text: "Dart",
+      id: uuidv4(),
+    },
+  ])
 
   return (
     <div
@@ -55,32 +95,30 @@ const AboutMe = () => {
               {/* first paragraph */}
               <div className="my-4">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Aspernatur, similique animi? Fugiat impedit incidunt aliquid
-                  a.
+                  Hello again, I am Addis Fenta. Graduated in Software Engineering from Bahir Dar University. 
                 </p>
               </div>
               {/* second paragraph */}
               <div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-                  commodi qui molestiae culpa repellat.
+                  With excellent experience on Web Design and Development using various frameworks and libraries.
                 </p>
               </div>
 
               {/* grid-skills */}
               <div className="mt-7 grid grid-cols-2 gap-x-5 gap-y-3">
                 {/* skill */}
-                {[...Array(4)].map((item, index) => {
+                {skills.map((skill) => {
                   return (
-                      <div key={index}>
+                      <div key={skill.id}>
                         {/* title */}
-                        <div className="font-semibold text-orange-border-color">
-                          <h1>JavaScript</h1>
+                        <div className="font-medium flex items-center gap-x-3 mb-1 text-orange-border-color">
+                          <skill.icon className="text-2xl"/>
+                          <h1>{skill.title}</h1>
                         </div>
                         {/* text */}
-                        <div className="text-sm">
-                          <p>frontend & backend</p>
+                        <div className="text-sm ml-10 opacity-75">
+                          <p>{skill.text}</p>
                         </div>
                       </div>
                   );
