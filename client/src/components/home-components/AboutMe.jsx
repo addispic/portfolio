@@ -65,9 +65,9 @@ const AboutMe = () => {
           </div>
           {/* paragraph */}
           <div>
-            <div className="text-center text-light-light max-w-[600px] opacity-85 mx-auto my-2">
+            <div className="text-center text-light-light max-w-[600px] opacity-95 mx-auto my-2">
               <p>
-              What drives me is the ability to take a client's vision and turn it into a reality. I enjoy the challenge of understanding their needs, crafting a design that is both aesthetically pleasing and user-friendly, and then bringing it to life through clean, efficient code
+              What drives me is the ability to take a client's vision and turn it into a reality. I enjoy the challenge of understanding their needs, crafting a design that is both aesthetically pleasing and user-friendly, and then bringing it to life through clean, efficient code.
               </p>
             </div>
           </div>
