@@ -25,7 +25,12 @@ const Header = ({scrollHandler}) => {
       <div className="max-width-container">
         <div className="flex items-center justify-between">
           {/* left site logo */}
-          <div>site logo</div>
+          <div>
+            <h1 className="cursor-pointer">
+              <span className="font-black text-lg opacity-65">addis</span>
+              <span className="text-xl font-black text-orange-border-color">Pic</span>
+            </h1>
+          </div>
           {/* right controllers */}
           <div className="flex items-center justify-end gap-x-3">
             {/* controllers */}
