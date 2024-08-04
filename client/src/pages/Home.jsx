@@ -8,6 +8,8 @@ import HomeFirstOrderComponent from "../components/home-components/HomeFirstOrde
 import ServicesComponent from "../components/home-components/ServicesComponent";
 // about me
 import AboutMe from "../components/home-components/AboutMe";
+// message me
+import MessageMe from "../components/home-components/MessageMe";
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
       <ServicesComponent />
       {/* about me */}
       <AboutMe />
+      {/* message me */}
+      <MessageMe />
     </div>
   );
 };

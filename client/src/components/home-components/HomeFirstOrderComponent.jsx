@@ -74,9 +74,9 @@ const HomeFirstOrderComponent = () => {
     >
       <div className="max-width-container relative overflow-hidden">
         {/* intro */}
-        <div className="py-16 relative z-50">
+        <div className="py-5 sm:py-10 md:py-16 relative z-50">
           {/* social links */}
-          <div className="flex items-center justify-start gap-x-7 mt-16 mb-5">
+          <div className="flex items-center justify-start gap-x-7 mt-5 sm:mt-10 md:mt-16 mb-5">
             {socialLinks?.linksOption?.map((linkItem) => {
               return (
                 <div key={linkItem?.id} className="relative">
@@ -124,13 +124,13 @@ const HomeFirstOrderComponent = () => {
           </div>
           {/* full name */}
           <div>
-            <p className="font-black text-4xl mb-5">
+            <p className="font-black text-2xl sm:text-3xl md:text-4xl mb-5">
               I am <span className="text-light-dark font-normal">Addis</span>{" "}
               <span className="text-light-dark font-normal">Fanta</span>
             </p>
           </div>
           {/* paragraph */}
-          <div className="w-[50%] mb-9">
+          <div className="w-[100%] md:w-[50%] mb-9">
             <p className="text-light-dark">
               Hi, I'm Addis <span className="font-black">MERN</span> stack developer with excellent
               experience on both frontend and backend development
@@ -167,10 +167,10 @@ const HomeFirstOrderComponent = () => {
           </div>
         </div>
         {/* background image */}
-        <div className="absolute right-0 bottom-0 w-full h-full flex items-center justify-end">
+        <div className="hidden md:absolute md:right-0 md:bottom-0 md:w-full md:h-full md:items-center md:justify-end md:flex">
             {/* image */}
-            <div className="w-[50%] h-full mt-10  flex items-end justify-center">
-              <div className="w-full h-full">
+            <div className="md:w-[50%] md:h-full mt-3 sm:mt-6 md:mt-10  flex items-end justify-center">
+              <div className="md:w-full md:h-full">
                 <img className="w-full object-center object-cover" src="https://png.pngtree.com/png-vector/20230918/ourmid/pngtree-man-in-shirt-smiles-and-gives-thumbs-up-to-show-approval-png-image_10094380.png" alt="" />
               </div>
             </div>

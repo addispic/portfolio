@@ -6,3 +6,9 @@
 .max-width-container {
     @apply max-w-[1000px] mx-auto px-[3%];
 }
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}

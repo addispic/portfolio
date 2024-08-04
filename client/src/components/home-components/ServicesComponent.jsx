@@ -84,11 +84,11 @@ const ServicesComponent = () => {
                 </div>
                 {/* the grid */}
                 <div className='py-7'>
-                    <div className='grid grid-cols-3 gap-10'>
+                    <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 md:gap-10'>
                         {
                             myServices?.serviceList.map((serviceItem)=>{
                                 return (
-                                    <div className='p-5 rounded-md bg-dark-light'>
+                                    <div key={serviceItem.title} className='p-5 rounded-md bg-dark-light'>
                                         {/* icon */}
                                         <div className='my-3 text-[1.75rem] text-orange-border-color'>
                                             <serviceItem.icon />

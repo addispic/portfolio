@@ -73,8 +73,7 @@ const AboutMe = () => {
                 {/* skill */}
                 {[...Array(4)].map((item, index) => {
                   return (
-                    <>
-                      <div>
+                      <div key={index}>
                         {/* title */}
                         <div className="font-semibold text-orange-border-color">
                           <h1>JavaScript</h1>
@@ -84,7 +83,6 @@ const AboutMe = () => {
                           <p>frontend & backend</p>
                         </div>
                       </div>
-                    </>
                   );
                 })}
               </div>
