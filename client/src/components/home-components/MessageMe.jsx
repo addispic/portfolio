@@ -4,7 +4,7 @@ import React, { useState } from "react";
 // send
 import { FiSend } from "react-icons/fi";
 
-const MessageMe = () => {
+const MessageMe = ({bottomReference}) => {
   // message
   const [message, setMessage] = useState("");
 
@@ -62,6 +62,7 @@ const MessageMe = () => {
           </div>
         </div>
       </div>
+        <div ref={bottomReference} />
     </div>
   );
 };

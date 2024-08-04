@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 // icons
 // facebook
 import { FaFacebookSquare } from "react-icons/fa";
+// git hub
+import { FaGithub } from "react-icons/fa";
 // twitter
 import { BsTwitter } from "react-icons/bs";
 // telegram
@@ -37,15 +39,15 @@ const HomeFirstOrderComponent = () => {
         id: uuidv4(),
       },
       {
-        icon: BsTwitter,
-        text: "Twitter",
-        path: "#",
+        icon: FaGithub,
+        text: "Github",
+        path: "https://github.com/addispic",
         id: uuidv4(),
       },
       {
         icon: BiLogoTelegram,
         text: "Telegram",
-        path: "#",
+        path: "https://t.me/addis_64",
         id: uuidv4(),
       },
       {

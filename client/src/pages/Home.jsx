@@ -11,7 +11,7 @@ import AboutMe from "../components/home-components/AboutMe";
 // message me
 import MessageMe from "../components/home-components/MessageMe";
 
-const Home = () => {
+const Home = ({bottomReference}) => {
   return (
     <div>
 
@@ -22,7 +22,7 @@ const Home = () => {
       {/* about me */}
       <AboutMe />
       {/* message me */}
-      <MessageMe />
+      <MessageMe bottomReference={bottomReference}/>
     </div>
   );
 };

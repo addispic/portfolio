@@ -13,7 +13,7 @@ import { BsMoonFill } from "react-icons/bs";
 // theme slice
 import { themeSwitcher,selectIsDarkMood } from "../features/theme-feature/themeSlice";
 
-const Header = () => {
+const Header = ({scrollHandler}) => {
     // slice state
     const isDarkMood = useSelector(selectIsDarkMood);
   // hooks
@@ -33,7 +33,7 @@ const Header = () => {
             {/* message button */}
             <div className="flex items-center gap-1 cursor-pointer">
               {/* text */}
-              <div className={`px-3 py-0.5 rounded-sm text-sm transition-colors ease-in-out duration-150  ${isDarkMood ? "bg-dark-btn-color hover:bg-dark-btn-color-hover" : "bg-light-btn-color hover:bg-light-btn-color-hover"}`}>
+              <div className={`px-3 py-0.5 rounded-sm text-sm transition-colors ease-in-out duration-150  ${isDarkMood ? "bg-dark-btn-color hover:bg-dark-btn-color-hover" : "bg-light-btn-color hover:bg-light-btn-color-hover"}`} onClick={scrollHandler}>
                 <span>message me</span>
               </div>
               {/* icon */}
@@ -50,7 +50,7 @@ const Header = () => {
               }}
             >
               <div className="flex items-center">
-                <BsSunFill />
+                {/* <BsSunFill /> */}
               </div>
             </div>
           </div>
