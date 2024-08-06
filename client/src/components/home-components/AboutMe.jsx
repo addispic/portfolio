@@ -80,7 +80,7 @@ const AboutMe = () => {
           <div className="mt-10 flex gap-x-5">
             {/* image */}
             <div className="hidden sm:flex sm:w-[45%] items-center justify-center">
-                <div className="max-w-[200px] ">
+                <div className="max-w-[250px] ">
                     <img className="w-full h-full object-center object-cover" src="addis3.png" alt="" />
                 </div>
             </div>

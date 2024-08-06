@@ -80,7 +80,7 @@ const MessageMe = ({bottomReference}) => {
                 {/* icon */}
                 <MdEmail />
                 {/* text */}
-                <span>addisfun7@gmail.com</span>
+                <span>addispik@gmail.com</span>
               </div>
             </div>
           </div>

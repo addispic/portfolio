@@ -35,7 +35,7 @@ const HomeFirstOrderComponent = () => {
       {
         icon: FaFacebookSquare,
         text: "Facebook",
-        path: "#",
+        path: "https://www.facebook.com/profile.php?id=100068313039937",
         id: uuidv4(),
       },
       {
@@ -53,7 +53,7 @@ const HomeFirstOrderComponent = () => {
       {
         icon: BiLogoLinkedin,
         text: "Linkedin",
-        path: "#",
+        path: "https://www.linkedin.com/in/addis-fanta-3253972a6",
         id: uuidv4(),
       },
       {
