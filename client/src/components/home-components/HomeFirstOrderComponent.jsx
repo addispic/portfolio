@@ -173,7 +173,7 @@ const HomeFirstOrderComponent = () => {
             {/* image */}
             <div className="md:w-[50%] md:h-full mt-3 sm:mt-6 md:mt-10  flex items-end justify-center">
               <div className="md:w-full md:h-full">
-                <img className="w-full object-center object-cover" src="https://png.pngtree.com/png-vector/20230918/ourmid/pngtree-man-in-shirt-smiles-and-gives-thumbs-up-to-show-approval-png-image_10094380.png" alt="" />
+                <img className="w-full object-center object-cover" src="/addis1.png" alt="" />
               </div>
             </div>
         </div>

@@ -81,7 +81,7 @@ const AboutMe = () => {
             {/* image */}
             <div className="hidden sm:flex sm:w-[45%] items-center justify-center">
                 <div className="max-w-[200px] ">
-                    <img className="w-full h-full object-center object-cover" src="https://www.transparentpng.com/thumb/man/rTkJ7v-man-png-image.png" alt="" />
+                    <img className="w-full h-full object-center object-cover" src="addis3.png" alt="" />
                 </div>
             </div>
             {/* text */}
