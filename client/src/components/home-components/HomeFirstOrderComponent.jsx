@@ -79,7 +79,7 @@ const HomeFirstOrderComponent = () => {
     >
       <div className="max-width-container relative overflow-hidden">
         {/* intro */}
-        <div className="py-5 sm:py-10 md:py-16 relative z-50">
+        <div className="py-5 sm:py-10 md:py-16 relative z-10">
           {/* social links */}
           <div className="flex items-center justify-start gap-x-3 sm:gap-x-5 md:gap-x-7 mt-5 sm:mt-10 md:mt-16 mb-5">
             {socialLinks?.linksOption?.map((linkItem) => {
