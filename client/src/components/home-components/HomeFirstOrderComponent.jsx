@@ -145,8 +145,8 @@ const HomeFirstOrderComponent = () => {
           {/* buttons */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-5 mb-5">
             {/* cv */}
-            {/* <a className="w-max" href={addispic_cv} download={`addispic-cv`}> */}
-              <div className="w-max cursor-pointer" onClick={()=>window.open(addispic_cv)}>
+            <a className="w-max" href={addispic_cv} download={`addispic-cv`}>
+              <div>
                 <>
                   <div className="flex items-center justify-center gap-1 border border-orange-border-color px-3 rounded-full py-0.5 transition-colors ease-in-out duration-300 hover:bg-light-light text-light-dark hover:text-dark-dark hover:border-light-light">
                     {/* text */}
@@ -160,7 +160,7 @@ const HomeFirstOrderComponent = () => {
                   </div>
                 </>
               </div>
-            {/* </a> */}
+            </a>
             {/* certificates */}
             <div className="w-max flex items-center justify-center gap-1 px-3 py-0.5 rounded-full bg-light-light text-dark-light border border-light-light transition-colors ease-in-out duration-300 hover:border-orange-border-color hover:bg-dark-light hover:text-light-dark cursor-pointer">
               {/* text */}
