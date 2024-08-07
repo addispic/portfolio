@@ -24,6 +24,9 @@ import { GrCertificate } from "react-icons/gr";
 // states from slice
 import { selectIsDarkMood } from "../../features/theme-feature/themeSlice";
 
+// addispic-cv
+import addispic_cv from "../../documents/addispic-cv.pdf";
+
 const HomeFirstOrderComponent = () => {
   // slice states
   const isDarkMood = useSelector(selectIsDarkMood);
@@ -134,27 +137,30 @@ const HomeFirstOrderComponent = () => {
           {/* paragraph */}
           <div className="w-[100%] md:w-[50%] mb-9">
             <p className="text-light-dark">
-              Hi, I'm Addis <span className="font-black">MERN</span> stack developer with excellent
-              experience on both frontend and backend development.
+              Hi, I'm Addis <span className="font-black">MERN</span> stack
+              developer with excellent experience on both frontend and backend
+              development.
             </p>
           </div>
           {/* buttons */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-5 mb-5">
             {/* cv */}
-            <div className="w-max">
-              <NavLink>
-                <div className="flex items-center justify-center gap-1 border border-orange-border-color px-3 rounded-full py-0.5 transition-colors ease-in-out duration-300 hover:bg-light-light text-light-dark hover:text-dark-dark hover:border-light-light">
-                  {/* text */}
-                  <div className="">
-                    <span>MY CV</span>
+            {/* <a className="w-max" href={addispic_cv} download={`addispic-cv`}> */}
+              <div className="w-max cursor-pointer" onClick={()=>window.open(addispic_cv)}>
+                <>
+                  <div className="flex items-center justify-center gap-1 border border-orange-border-color px-3 rounded-full py-0.5 transition-colors ease-in-out duration-300 hover:bg-light-light text-light-dark hover:text-dark-dark hover:border-light-light">
+                    {/* text */}
+                    <div className="">
+                      <span>MY CV</span>
+                    </div>
+                    {/* icon */}
+                    <div>
+                      <FaFilePdf className="text-sm text-orange-border-color" />
+                    </div>
                   </div>
-                  {/* icon */}
-                  <div>
-                    <FaFilePdf className="text-sm text-orange-border-color"/>
-                  </div>
-                </div>
-              </NavLink>
-            </div>
+                </>
+              </div>
+            {/* </a> */}
             {/* certificates */}
             <div className="w-max flex items-center justify-center gap-1 px-3 py-0.5 rounded-full bg-light-light text-dark-light border border-light-light transition-colors ease-in-out duration-300 hover:border-orange-border-color hover:bg-dark-light hover:text-light-dark cursor-pointer">
               {/* text */}
@@ -163,19 +169,23 @@ const HomeFirstOrderComponent = () => {
               </div>
               {/* icon */}
               <div>
-                <GrCertificate className="text-orange-border-color"/>
+                <GrCertificate className="text-orange-border-color" />
               </div>
             </div>
           </div>
         </div>
         {/* background image */}
         <div className="hidden md:absolute md:right-0 md:bottom-0 md:w-full md:h-full md:items-center md:justify-end md:flex">
-            {/* image */}
-            <div className="md:w-[50%] md:h-full mt-3 sm:mt-6 md:mt-10  flex items-end justify-center">
-              <div className="md:w-full md:h-full">
-                <img className="w-full object-center object-cover" src="/addis1.png" alt="" />
-              </div>
+          {/* image */}
+          <div className="md:w-[50%] md:h-full mt-3 sm:mt-6 md:mt-10  flex items-end justify-center">
+            <div className="md:w-full md:h-full">
+              <img
+                className="w-full object-center object-cover"
+                src="/addis1.png"
+                alt=""
+              />
             </div>
+          </div>
         </div>
       </div>
     </div>
