@@ -81,11 +81,11 @@ const Header = ({ scrollHandler }) => {
               >
                 {/* image 1 */}
                 <div>
-                  <img src="/addis4.JPG" alt="" />
+                  <img src="https://t3.ftcdn.net/jpg/03/05/77/64/360_F_305776453_t7SUl48g63zLsyODxd60aj6EcWR9avVK.jpg" alt="" />
                 </div>
                 {/* image 2 */}
                 <div>
-                  <img src="/addis2.JPG" alt="" />
+                  <img src="https://img.freepik.com/premium-photo/laughing-having-fun_1187-381050.jpg" alt="" />
                 </div>
               </div>
               {isMe ? (
