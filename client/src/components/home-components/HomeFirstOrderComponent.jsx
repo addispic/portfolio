@@ -181,7 +181,7 @@ const HomeFirstOrderComponent = () => {
             <div className="md:w-full md:h-full">
               <img
                 className="w-full object-center object-cover"
-                src="/addis1.png"
+                src="/addispic-3.png"
                 alt=""
               />
             </div>
