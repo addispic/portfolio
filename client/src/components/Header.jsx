@@ -75,17 +75,17 @@ const Header = ({ scrollHandler }) => {
             <div className="cursor-pointer relative md:hidden">
               {/* pop up image */}
               <div
-                className={`transition-transform ease-in-out duration-150 bg-dark-dark absolute z-30 right-0 top-[2rem] w-[200px] h-max rounded-md overflow-hidden ${
+                className={`transition-transform ease-in-out duration-150 bg-light-light absolute z-30 right-0 top-[2rem] w-[200px] h-max rounded-md overflow-hidden ${
                   isMe ? "scale-100" : "scale-0"
                 }`}
               >
                 {/* image 1 */}
                 <div>
-                  <img src="https://t3.ftcdn.net/jpg/03/05/77/64/360_F_305776453_t7SUl48g63zLsyODxd60aj6EcWR9avVK.jpg" alt="" />
+                  <img src="/addispic-3.png" alt="" />
                 </div>
                 {/* image 2 */}
                 <div>
-                  <img src="https://img.freepik.com/premium-photo/laughing-having-fun_1187-381050.jpg" alt="" />
+                  <img src="/addispic-1.png" alt="" />
                 </div>
               </div>
               {isMe ? (
