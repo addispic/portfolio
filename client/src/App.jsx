@@ -1,29 +1,20 @@
-
-import React,{useRef} from 'react'
+import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 
+// pages
+import Home from './pages/Home'
 // components
-// header
 import Header from './components/Header'
 
-// pages
-// home
-import Home from './pages/Home'
-
 const App = () => {
-  let bottomReference = useRef(null)
-
-  const scrollHandler = () => {
-    bottomReference?.current.scrollIntoView({ behavior: 'smooth' })
-  }
   return (
-    <div className='w-screen h-screen overflow-x-hidden'>
+    <div className='w-screen h-screen text-green-500 overflow-hidden'>
       {/* header */}
-      <Header scrollHandler={scrollHandler}/>
-      {/* pages */}
+      <Header />
+      {/* routes */}
       <Routes>
-        {/* home page */}
-        <Route path='/' element={<Home bottomReference={bottomReference}/>}></Route>
+        {/* home */}
+        <Route path='/' element={<Home />}></Route>
       </Routes>
     </div>
   )
