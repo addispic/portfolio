@@ -25,7 +25,7 @@ import { GrCertificate } from "react-icons/gr";
 import { selectIsDarkMood } from "../../features/theme-feature/themeSlice";
 
 // addispic-cv
-import addispic_cv from "../../documents/addispic-cv.pdf";
+import addispic_cv from "../../documents/AddisFentaResume.pdf";
 
 const HomeFirstOrderComponent = () => {
   // slice states
