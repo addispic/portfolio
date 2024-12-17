@@ -18,6 +18,11 @@ import { SiMongodb } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoDjango } from "react-icons/bi";
 
+// tools
+import { VscVscode } from "react-icons/vsc";
+import { SiPostman } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa6";
+
 const Home = () => {
   // states
   // social links
@@ -79,6 +84,24 @@ const Home = () => {
     //     text: "",
     // },
   ]);
+  // tools
+  const [tools,setTolls] = useState([
+    {
+        icon: VscVscode,
+        title: "VS Code",
+        text: "My primary code editor, offering powerful features like IntelliSense, debugging tools, and a wide range of extensions to enhance productivity and streamline development."
+    },
+    {
+        icon: SiPostman,
+        title: "Postman",
+        text: "Used for testing and debugging APIs, allowing me to quickly send requests, analyze responses, and ensure smooth communication between the frontend and backend."
+    },
+    {
+        icon: FaGitAlt,
+        title: "Git",
+        text: "Essential for version control, helping me manage and track code changes, collaborate with teams, and maintain an organized development process."
+    },
+  ])
 
   return (
     <div>
@@ -232,9 +255,7 @@ const Home = () => {
           </div>
           {/* right */}
           <div className="flex-1">
-            <h3 className="header-iii">
-              Technical Proficiencies
-            </h3>
+            <h3 className="header-iii">Technical Proficiencies</h3>
             <p className="my-5 text-smc text-neutral-700">
               I specialize in building full-stack applications using React,
               Next.js, Node.js, Express, and MongoDB, with Tailwind CSS for
@@ -266,6 +287,47 @@ const Home = () => {
                 );
               })}
             </div>
+          </div>
+        </div>
+      </div>
+      {/* 4 */}
+      <div className="py-7 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="main-padding">
+          <div className="flex items-center justify-center">
+            <h3 className="header-iii">Tools That Power My Work</h3>
+          </div>
+          <div className="max-w-[720px] mx-auto my-5 text-neutral-700 text-center">
+            <p>
+              To streamline my development process, I rely on the following
+              tools that help me write efficient code, test APIs, and manage
+              version control
+            </p>
+          </div>
+          {/* grid */}
+          <div className="grid grid-cols-1 gap-y-5 sm:grid-cols-3 gap-x-5 sm:gap-x-7 md:gap-x-9 lg:gap-x-12 mt-5 px-5">
+            {
+                tools.map((tool)=>{
+                    return (
+                        <div key={tool.title}>
+                            {/* header */}
+                            <header className={`flex items-center gap-x-3 my-3 ${tool.title === "VS Code" ? "text-cyan-600" : tool.title === "Postman" ? "text-orange-600" : "text-red-500"}`}>
+                                {/* icon */}
+                                <div>
+                                    <tool.icon className="text-2xl"/>
+                                </div>
+                                {/* title */}
+                                <div className="font-bold">
+                                    <p>{tool.title}</p>
+                                </div>
+                            </header>
+                            {/* text */}
+                            <div className="text-sm">
+                                <p>{tool.text}</p>
+                            </div>
+                        </div>
+                    )
+                })
+            }
           </div>
         </div>
       </div>
