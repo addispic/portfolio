@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // icons
+// social icons
 import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaTelegramPlane } from "react-icons/fa";
+// quotes
+import { BiSolidQuoteAltLeft } from "react-icons/bi";
+import { BiSolidQuoteAltRight } from "react-icons/bi";
 
 const Home = () => {
   // states
@@ -147,6 +151,10 @@ const Home = () => {
       {/* 2 */}
       <div className="py-7 bg-gradient-to-r from-neutral-50 to-white">
         <div className="main-padding text-center">
+            {/* left quote */}
+            <div className="w-full flex items-center justify-start pl-12 my-3 text-3xl text-neutral-300">
+                <BiSolidQuoteAltLeft />
+            </div>
           <p className="max-w-[1020px] mx-auto text-center text-neutral-600">
             With a strong emphasis on writing clean, maintainable code, crafting
             seamless user experiences, and adhering to modern design principles,
@@ -156,6 +164,10 @@ const Home = () => {
             ideas into impactful digital solutions that drive value and inspire
             users.
           </p>
+          {/* right quote */}
+          <div className="w-full flex items-center justify-end pr-12 my-3 text-3xl text-neutral-300">
+                <BiSolidQuoteAltRight />
+            </div>
         </div>
       </div>
     </div>
