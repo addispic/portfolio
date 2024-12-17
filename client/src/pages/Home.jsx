@@ -32,12 +32,27 @@ const Home = () => {
   return (
     <div>
       {/* 1 */}
-      <div className="py-20 bg-gradient-to-r from-white to-neutral-50">
-        <div className="flex items-center main-padding">
+      <div className="py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-gradient-to-r from-white to-neutral-50">
+        <div className="flex flex-col gap-y-5 sm:gap-y-7 md:gap-y-9 lg:gap-y-12 md:flex-row items-center main-padding">
           {/* left */}
-          <div className="w-1/2 bg-red-200">left</div>
+          <div className="w-full md:w-1/2">
+            {/* intro */}
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+              I'm <span className="font-black text-neutral-400">Addis</span>
+            </p>
+            <div className="mt-3 text-neutral-700">
+              <p>
+                <span className="font-medium">Full Stack</span> Developer
+                passionate about building dynamic and scalable web applications.
+                I specialize in the <span className="font-medium">MERN</span>{" "}
+                stack to deliver end-to-end solutions, and I occasionally use{" "}
+                <span className="font-medium">Django</span> to build robust
+                back-end systems.
+              </p>
+            </div>
+          </div>
           {/* right */}
-          <div className="w-1/2 flex items-center justify-center">
+          <div className="w-full md:w-1/2 flex items-center justify-center">
             {/* about me */}
             <div className="bg-white rounded-3xl rounded-bl-none rounded-tr-none overflow-hidden p-5 shadow-lg">
               {/* image & detail */}
@@ -127,6 +142,20 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* 2 */}
+      <div className="py-7 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="main-padding text-center">
+          <p className="max-w-[1020px] mx-auto text-center text-neutral-600">
+            With a strong emphasis on writing clean, maintainable code, crafting
+            seamless user experiences, and adhering to modern design principles,
+            I strive to build intuitive and efficient applications that not only
+            meet user needs but also stand the test of time. By blending
+            creativity with technical expertise, I aim to transform innovative
+            ideas into impactful digital solutions that drive value and inspire
+            users.
+          </p>
         </div>
       </div>
     </div>
