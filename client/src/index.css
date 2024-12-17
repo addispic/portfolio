@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* scroll */
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* paddings */
+/* main paddings */
+.main-padding {
+  @apply px-3 sm:px-7 md:px-16 lg:px-24 xl:px-36;
 }
