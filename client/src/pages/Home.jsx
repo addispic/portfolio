@@ -112,7 +112,7 @@ const Home = () => {
           <div className="w-full md:w-1/2">
             {/* intro */}
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
-              I'm <span className="font-black text-neutral-400">Addis</span>
+              I'm <span className="font-black text-neutral-400">Addis (ዘድንግል)</span>
             </p>
             <div className="mt-3 text-neutral-700">
               <p>
