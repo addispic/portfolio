@@ -9,6 +9,14 @@ import { FaTelegramPlane } from "react-icons/fa";
 // quotes
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { BiSolidQuoteAltRight } from "react-icons/bi";
+// skills
+import { FaReact } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoDjango } from "react-icons/bi";
 
 const Home = () => {
   // states
@@ -33,6 +41,45 @@ const Home = () => {
     ],
     selected: "",
   });
+  // skills
+  const [skills, setSkills] = useState([
+    {
+      icon: FaReact,
+      title: "React",
+      text: "Responsive user interfaces with React, focusing on clean components, efficient state management, and optimized performance for seamless experiences.",
+    },
+    {
+      icon: RiNextjsFill,
+      title: "Next JS",
+      text: "Develop fast, scalable web applications with Next.js, using server-side rendering, static site generation, and API routes to enhance performance and SEO.",
+    },
+    {
+      icon: FaNodeJs,
+      title: "Node",
+      text: "Build scalable backends with Node.js, focusing on RESTful APIs, real-time functionality, and seamless database integration.",
+    },
+    {
+      icon: SiExpress,
+      title: "Express",
+      text: "Create robust and flexible APIs with Express.js, emphasizing clean routing, middleware integration, and fast, efficient request handling.",
+    },
+    {
+      icon: SiMongodb,
+      title: "MongoDB",
+      text: "Design scalable databases with MongoDB, focusing on efficient data modeling, queries, and optimized performance.",
+    },
+    {
+      icon: RiTailwindCssFill,
+      title: "Tailwind CSS",
+      text: "Responsive, modern designs with Tailwind CSS, leveraging utility-first classes for fast styling and consistent layouts.",
+    },
+    // {
+    //     icon: BiLogoDjango,
+    //     title: "Django",
+    //     text: "",
+    // },
+  ]);
+
   return (
     <div>
       {/* 1 */}
@@ -151,10 +198,10 @@ const Home = () => {
       {/* 2 */}
       <div className="py-7 bg-gradient-to-r from-neutral-50 to-white">
         <div className="main-padding text-center">
-            {/* left quote */}
-            <div className="w-full flex items-center justify-start pl-12 my-3 text-3xl text-neutral-300">
-                <BiSolidQuoteAltLeft />
-            </div>
+          {/* left quote */}
+          <div className="w-full flex items-center justify-start pl-12 my-3 text-3xl text-neutral-300">
+            <BiSolidQuoteAltLeft />
+          </div>
           <p className="max-w-[1020px] mx-auto text-center text-neutral-600">
             With a strong emphasis on writing clean, maintainable code, crafting
             seamless user experiences, and adhering to modern design principles,
@@ -166,8 +213,60 @@ const Home = () => {
           </p>
           {/* right quote */}
           <div className="w-full flex items-center justify-end pr-12 my-3 text-3xl text-neutral-300">
-                <BiSolidQuoteAltRight />
+            <BiSolidQuoteAltRight />
+          </div>
+        </div>
+      </div>
+      {/* 3 */}
+      <div className="py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-gradient-to-r from-white to-neutral-50">
+        <div className="main-padding flex flex-col gap-y-10 md:flex-row gap-x-10">
+          {/* left */}
+          <div className="md:w-[40%] shrink-0 rounded-md md:rounded-3xl overflow-hidden">
+            <div className="w-full h-full">
+              <img
+                className="w-full h-full object-center object-cover"
+                src="/addis-iii.jpg"
+                alt=""
+              />
             </div>
+          </div>
+          {/* right */}
+          <div className="flex-1">
+            <h3 className="header-iii">
+              Technical Proficiencies
+            </h3>
+            <p className="my-5 text-smc text-neutral-700">
+              I specialize in building full-stack applications using React,
+              Next.js, Node.js, Express, and MongoDB, with Tailwind CSS for
+              responsive designs.
+            </p>
+            {/* skills */}
+            <div className="ml-[16px] py-3 rounded-sm border-l border-neutral-300">
+              {skills.map((skill) => {
+                return (
+                  <div key={skill.title}>
+                    {/* header */}
+                    <header className="flex items-center gap-x-5">
+                      {/* icon */}
+                      <div className="w-[32px] ml-[-16px] aspect-square rounded-full border border-neutral-400 flex items-center justify-center bg-white text-lg text-neutral-500">
+                        <skill.icon />
+                      </div>
+                      {/* title */}
+                      <div>
+                        <h3 className="text-xl text-neutral-700">
+                          {skill.title}
+                        </h3>
+                      </div>
+                    </header>
+                    {/* content */}
+                    <div className="ml-[36px] mb-3">
+                      <p>{skill.text}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </div>
