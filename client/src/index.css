@@ -13,6 +13,6 @@
   @apply px-3 sm:px-7 md:px-16 lg:px-24 xl:px-36;
 }
 /* title */
-.header-iii {
+/* .header-iii {
     @apply text-3xl relative after:absolute after:left-0 after:bottom-0 after:w-[25%] after:h-[2px] after:rounded-full after:bg-neutral-700
-}
+} */
