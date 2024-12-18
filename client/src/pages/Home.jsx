@@ -313,8 +313,7 @@ const Home = () => {
               <a
                 className="w-max"
                 href={addisResume}
-                rel="noopener noreferrer"
-                target="_blank"
+                download={"addispic-resume"}
               >
                 <div className="flex items-center gap-x-1.5 px-2 py-1 rounded-sm bg-neutral-100 w-max transition-colors ease-in-out duration-150 hover:bg-neutral-200">
                   <FaFilePdf className="text-red-600" />
