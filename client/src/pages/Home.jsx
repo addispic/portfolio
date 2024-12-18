@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import { Pagination, FreeMode } from "swiper/modules";
+
 // icons
 // social icons
 import { IoLogoGithub } from "react-icons/io5";
@@ -22,6 +30,10 @@ import { BiLogoDjango } from "react-icons/bi";
 import { VscVscode } from "react-icons/vsc";
 import { SiPostman } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa6";
+
+// collections
+import { IoIosWarning } from "react-icons/io";
+import { CiGlobe } from "react-icons/ci";
 
 const Home = () => {
   // states
@@ -85,23 +97,37 @@ const Home = () => {
     // },
   ]);
   // tools
-  const [tools,setTolls] = useState([
+  const [tools, setTolls] = useState([
     {
-        icon: VscVscode,
-        title: "VS Code",
-        text: "My primary code editor, offering powerful features like IntelliSense, debugging tools, and a wide range of extensions to enhance productivity and streamline development."
+      icon: VscVscode,
+      title: "VS Code",
+      text: "My primary code editor, offering powerful features like IntelliSense, debugging tools, and a wide range of extensions to enhance productivity and streamline development.",
     },
     {
-        icon: SiPostman,
-        title: "Postman",
-        text: "Used for testing and debugging APIs, allowing me to quickly send requests, analyze responses, and ensure smooth communication between the frontend and backend."
+      icon: SiPostman,
+      title: "Postman",
+      text: "Used for testing and debugging APIs, allowing me to quickly send requests, analyze responses, and ensure smooth communication between the frontend and backend.",
     },
     {
-        icon: FaGitAlt,
-        title: "Git",
-        text: "Essential for version control, helping me manage and track code changes, collaborate with teams, and maintain an organized development process."
+      icon: FaGitAlt,
+      title: "Git",
+      text: "Essential for version control, helping me manage and track code changes, collaborate with teams, and maintain an organized development process.",
     },
-  ])
+  ]);
+
+  // demos
+  const [demos, setDemos] = useState([
+    {
+      image: "/dashboard-i.png",
+      site: "https://ui-demo-0uv1.onrender.com",
+      git: "https://github.com/addispic/uidemo/tree/dashboard-i",
+    },
+    {
+      image: "/landing-page-i.png",
+      site: "https://explore-ethiopia.onrender.com",
+      git: "https://github.com/addispic/ui-demo/tree/explore-ethiopia",
+    },
+  ]);
 
   return (
     <div>
@@ -112,7 +138,8 @@ const Home = () => {
           <div className="w-full md:w-1/2">
             {/* intro */}
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
-              I'm <span className="font-black text-neutral-400">Addis (ዘድንግል)</span>
+              I'm{" "}
+              <span className="font-black text-neutral-400">Addis (ዘድንግል)</span>
             </p>
             <div className="mt-3 text-neutral-700">
               <p>
@@ -291,7 +318,7 @@ const Home = () => {
         </div>
       </div>
       {/* 4 */}
-      <div className="py-7 bg-gradient-to-r from-neutral-50 to-white">
+      <div className="py-12 bg-gradient-to-r from-neutral-50 to-white">
         <div className="main-padding">
           <div className="flex items-center justify-center">
             <h3 className="header-iii">Tools That Power My Work</h3>
@@ -305,29 +332,128 @@ const Home = () => {
           </div>
           {/* grid */}
           <div className="grid grid-cols-1 gap-y-5 sm:grid-cols-3 gap-x-5 sm:gap-x-7 md:gap-x-9 lg:gap-x-12 mt-5 px-5">
-            {
-                tools.map((tool)=>{
-                    return (
-                        <div key={tool.title}>
-                            {/* header */}
-                            <header className={`flex items-center gap-x-3 my-3 ${tool.title === "VS Code" ? "text-cyan-600" : tool.title === "Postman" ? "text-orange-600" : "text-red-500"}`}>
-                                {/* icon */}
-                                <div>
-                                    <tool.icon className="text-2xl"/>
-                                </div>
-                                {/* title */}
-                                <div className="font-bold">
-                                    <p>{tool.title}</p>
-                                </div>
-                            </header>
-                            {/* text */}
-                            <div className="text-sm">
-                                <p>{tool.text}</p>
-                            </div>
-                        </div>
-                    )
-                })
-            }
+            {tools.map((tool) => {
+              return (
+                <div key={tool.title}>
+                  {/* header */}
+                  <header
+                    className={`flex items-center gap-x-3 my-3 ${
+                      tool.title === "VS Code"
+                        ? "text-cyan-600"
+                        : tool.title === "Postman"
+                        ? "text-orange-600"
+                        : "text-red-500"
+                    }`}
+                  >
+                    {/* icon */}
+                    <div>
+                      <tool.icon className="text-2xl" />
+                    </div>
+                    {/* title */}
+                    <div className="font-bold">
+                      <p>{tool.title}</p>
+                    </div>
+                  </header>
+                  {/* text */}
+                  <div className="text-sm">
+                    <p>{tool.text}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      {/* 5 */}
+      <div className="py-7 md:py-12 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="main-padding">
+          <div className="flex items-center justify-center gap-x-3">
+            <div className="w-[10%] md:w-[30%] h-[1px] rounded-full bg-neutral-400" />
+            <div className="text-3xl px-5 py-1.5 border border-neutral-400 rounded-full overflow-hidden whitespace-nowrap">
+              <span>UI/UX Demo</span>
+            </div>
+            <div className="w-[10%] md:w-[30%] h-[1px] rounded-full bg-neutral-400" />
+          </div>
+
+          <div className="my-10 text-center text-neutral-700">
+            <p>
+              These UI demos are designed to showcase my skills as an
+              experienced web developer. Visitors can view the live sites to
+              experience the design and functionality, explore the source code
+              to see the implementation, and test the responsiveness by
+              adjusting screen sizes. Please note that these demos are created
+              solely for demonstration purposes and do not represent real-world
+              content.
+            </p>
+          </div>
+
+          {/* pictures */}
+          <Swiper
+            breakpoints={{
+              450: {
+                slidesPerView: 1,
+                spaceBetween: 12,
+              },
+              700: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+            }}
+            freeMode={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination, FreeMode]}
+          >
+            {demos.map((demo, index) => {
+              return (
+                <SwiperSlide key={demo.site}>
+                  <div className="mb-10 w-full relative">
+                    {/* info container */}
+                    <div className="relative w-max bg-white shadow-lg p-5 rounded-md rounded-bl-none flex items-center gap-x-12">
+                      <NavLink
+                        target="_blank"
+                        to={demo.site}
+                        className="flex items-center gap-x-1.5 text-sm text-neutral-400 transition-colors ease-in-out duration-150 hover:text-green-500 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:rounded-full after:bg-green-500 after:transition-all after:ease-in-out after:duration-150 hover:after:w-full"
+                      >
+                        <CiGlobe />
+                        <span>Visit site</span>
+                      </NavLink>
+                      <NavLink
+                        target="_blank"
+                        to={demo.git}
+                        className="flex items-center gap-x-1.5 text-sm text-neutral-400 transition-colors ease-in-out duration-150 hover:text-green-500 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:rounded-full after:bg-green-500 after:transition-all after:ease-in-out after:duration-150 hover:after:w-full"
+                      >
+                        <IoLogoGithub />
+                        <span>Source code</span>
+                      </NavLink>
+                    </div>
+                    {/* image */}
+                    <div className="w-[100%] h-[450px]m rounded-xl rounded-tl-none border border-neutral-400 overflow-hidden">
+                      <img
+                        className="w-full h-full object-center object-contain"
+                        src={demo.image}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          <div className="max-w-[720px] mx-auto my-5 p-5 border border-red-500 rounded-md bg-red-50  flex flex-col md:flex-row gap-y-3 items-center gap-x-1.5">
+            {/* icon */}
+            <div className="w-[32px] aspect-square rounded-full shrink-0 border border-red-500 text-lg text-red-500 flex items-center justify-center">
+              <IoIosWarning />
+            </div>
+            {/* text */}
+            <div className="text-sm italic text-center md:text-left">
+              <p>
+                The above UI designs are conceptual and created solely for
+                demonstration purposes to showcase my skills and experience as a
+                web developer.
+              </p>
+            </div>
           </div>
         </div>
       </div>
