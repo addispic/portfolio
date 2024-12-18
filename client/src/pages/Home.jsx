@@ -35,6 +35,14 @@ import { FaGitAlt } from "react-icons/fa6";
 import { IoIosWarning } from "react-icons/io";
 import { CiGlobe } from "react-icons/ci";
 
+// languages
+import { TbBrandJavascript } from "react-icons/tb";
+import { BiLogoTypescript } from "react-icons/bi";
+import { IoLogoHtml5 } from "react-icons/io5";
+import { IoLogoCss3 } from "react-icons/io";
+import { IoLogoPython } from "react-icons/io";
+import { SiDart } from "react-icons/si";
+
 const Home = () => {
   // states
   // social links
@@ -129,6 +137,39 @@ const Home = () => {
     },
   ]);
 
+  // languages
+  const [languages, setLanguages] = useState([
+    {
+      language: "JavaScript",
+      icon: TbBrandJavascript,
+      percent: 85,
+    },
+    {
+      language: "TypeScript",
+      icon: BiLogoTypescript,
+      percent: 75,
+    },
+    {
+      language: "HTML5",
+      icon: IoLogoHtml5,
+      percent: 95,
+    },
+    {
+      language: "CSS3",
+      icon: IoLogoCss3,
+      percent: 80,
+    },
+    {
+      language: "Python",
+      icon: IoLogoPython,
+      percent: 35,
+    },
+    {
+      language: "Dart",
+      icon: SiDart,
+      percent: 25,
+    },
+  ]);
   return (
     <div>
       {/* 1 */}
@@ -365,7 +406,7 @@ const Home = () => {
         </div>
       </div>
       {/* 5 */}
-      <div className="py-7 md:py-12 bg-gradient-to-r from-neutral-50 to-white">
+      <div className="py-7 md:py-12 bg-gradient-to-r from-white to-neutral-50">
         <div className="main-padding">
           <div className="flex items-center justify-center gap-x-3">
             <div className="w-[10%] md:w-[30%] h-[1px] rounded-full bg-neutral-400" />
@@ -454,6 +495,56 @@ const Home = () => {
                 web developer.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+      {/* 6 */}
+      <div className="py-12 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="main-padding">
+          <div className="flex items-center ">
+            <h3 className="header-iii">Languages Summary</h3>
+          </div>
+          <div className="max-w-[720px] my-5 text-neutral-700">
+            <p>
+              This section highlights the programming languages I use, along
+              with my proficiency levels in each. It reflects my expertise in
+              foundational and advanced technologies essential for modern web
+              development.
+            </p>
+          </div>
+          {/* languages */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-10">
+            {languages.map((item, index) => {
+              return (
+                <div
+                  key={item.language}
+                  className="bg-white shadow-md border-2 border-white relative flex items-center justify-center rounded-md p-5"
+                >
+                  {/* icon */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 mt-[-18px] w-[36px] aspect-square rounded-full flex items-center justify-center text-xl bg-neutral-200 text-neutral-700">
+                    <item.icon />
+                  </div>
+                  <div
+                    className={`flex flex-col items-center justify-center ${
+                      item.language === "JavaScript"
+                        ? "text-yellow-500"
+                        : item.language === "TypeScript"
+                        ? "text-blue-500"
+                        : item.language === "HTML5"
+                        ? "text-orange-500"
+                        : item.language === "CSS3"
+                        ? "text-pink-500"
+                        : item.language === "Python"
+                        ? "text-emerald-500"
+                        : "text-cyan-500"
+                    }`}
+                  >
+                    <p>{item.language}</p>
+                    <p className="text-2xl">{item.percent}%</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
