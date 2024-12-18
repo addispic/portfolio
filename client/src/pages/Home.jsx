@@ -267,7 +267,7 @@ const Home = () => {
                 }}
               >
                 <div
-                  className={`absolute top-1/2 transition-all ease-in-out duration-150 -translate-y-1/2 whitespace-nowrap left-[-80px] text-sm text-neutral-700 bg-white p-1 ${
+                  className={`absolute hidden lg:inline-block top-1/2 transition-all ease-in-out duration-150 -translate-y-1/2 whitespace-nowrap left-[-80px] text-sm text-neutral-700 bg-white p-1 ${
                     links.selected === item.text ? "scale-100" : "scale-0"
                   }`}
                 >
