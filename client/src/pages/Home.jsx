@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -43,8 +43,41 @@ import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoPython } from "react-icons/io";
 import { SiDart } from "react-icons/si";
 
+// links
+import { LiaUserSolid } from "react-icons/lia";
+import { TbSettingsCode } from "react-icons/tb";
+import { RiToolsLine } from "react-icons/ri";
+import { RiSlideshow3Line } from "react-icons/ri";
+import { PiCodeThin } from "react-icons/pi";
+
 const Home = () => {
   // states
+  // links
+  const [links, setLinks] = useState({
+    options: [
+      {
+        icon: LiaUserSolid,
+        text: "About me",
+      },
+      {
+        icon: TbSettingsCode,
+        text: "Skills",
+      },
+      {
+        icon: RiToolsLine,
+        text: "Tools",
+      },
+      {
+        icon: RiSlideshow3Line,
+        text: "UI Demo",
+      },
+      {
+        icon: PiCodeThin,
+        text: "Languages",
+      },
+    ],
+    selected: "",
+  });
   // social links
   const [socialLinks, setSocialLinks] = useState({
     options: [
@@ -170,10 +203,90 @@ const Home = () => {
       percent: 25,
     },
   ]);
+
+  // references
+  const meRef = useRef(null);
+  const skillRef = useRef(null);
+  const toolRef = useRef(null);
+  const demoRef = useRef(null);
+  const lanRef = useRef(null);
+
+  // scroll into ref handler
+  const scrollIntRefHandler = (refText) => {
+    if (refText === "About me") {
+      if (meRef.current) {
+        meRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (refText === "Skills") {
+      if (skillRef.current) {
+        skillRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (refText === "Tools") {
+      if (toolRef.current) {
+        toolRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (refText === "UI Demo") {
+      if (demoRef.current) {
+        demoRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (refText === "Languages") {
+      if (lanRef.current) {
+        lanRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    <div>
+    <div className="relative">
+      {/* links */}
+      <div className="fixed z-50 right-0 top-1/2 -translate-y-1/2 p-[20px]">
+        <div className="border-r-[1px] border-neutral-200 py-1.5">
+          {links.options.map((item) => {
+            return (
+              <div
+                key={item.text}
+                className="relative"
+                onClick={() => {
+                  scrollIntRefHandler(item.text);
+                }}
+                onMouseEnter={() => {
+                  setLinks((prev) => {
+                    return {
+                      ...prev,
+                      selected: item.text,
+                    };
+                  });
+                }}
+                onMouseLeave={() => {
+                  setLinks((prev) => {
+                    return {
+                      ...prev,
+                      selected: "",
+                    };
+                  });
+                }}
+              >
+                <div
+                  className={`absolute top-1/2 transition-all ease-in-out duration-150 -translate-y-1/2 whitespace-nowrap left-[-80px] text-sm text-neutral-700 bg-white p-1 ${
+                    links.selected === item.text ? "scale-100" : "scale-0"
+                  }`}
+                >
+                  <span>{item.text}</span>
+                </div>
+                {/* icon */}
+                <div className="w-[32px] mr-[-16px] my-3 cursor-pointer aspect-square shrink-0 border border-neutral-200 rounded-full bg-white flex items-center justify-center">
+                  <item.icon />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
       {/* 1 */}
-      <div className="py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-gradient-to-r from-white to-neutral-50">
+      <div
+        ref={meRef}
+        className="py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-gradient-to-r from-white to-neutral-50"
+      >
         <div className="flex flex-col gap-y-5 sm:gap-y-7 md:gap-y-9 lg:gap-y-12 md:flex-row items-center main-padding">
           {/* left */}
           <div className="w-full md:w-1/2">
@@ -309,7 +422,10 @@ const Home = () => {
         </div>
       </div>
       {/* 3 */}
-      <div className="py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-gradient-to-r from-white to-neutral-50">
+      <div
+        ref={skillRef}
+        className="py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-gradient-to-r from-white to-neutral-50"
+      >
         <div className="main-padding flex flex-col gap-y-10 md:flex-row gap-x-10">
           {/* left */}
           <div className="md:w-[40%] shrink-0 rounded-md md:rounded-3xl overflow-hidden">
@@ -359,7 +475,10 @@ const Home = () => {
         </div>
       </div>
       {/* 4 */}
-      <div className="py-12 bg-gradient-to-r from-neutral-50 to-white">
+      <div
+        ref={toolRef}
+        className="py-12 bg-gradient-to-r from-neutral-50 to-white"
+      >
         <div className="main-padding">
           <div className="flex items-center justify-center">
             <h3 className="header-iii">Tools That Power My Work</h3>
@@ -406,7 +525,10 @@ const Home = () => {
         </div>
       </div>
       {/* 5 */}
-      <div className="py-7 md:py-12 bg-gradient-to-r from-white to-neutral-50">
+      <div
+        ref={demoRef}
+        className="py-7 md:py-12 bg-gradient-to-r from-white to-neutral-50"
+      >
         <div className="main-padding">
           <div className="flex items-center justify-center gap-x-3">
             <div className="w-[10%] md:w-[30%] h-[1px] rounded-full bg-neutral-400" />
@@ -499,7 +621,10 @@ const Home = () => {
         </div>
       </div>
       {/* 6 */}
-      <div className="py-12 bg-gradient-to-r from-neutral-50 to-white">
+      <div
+        ref={lanRef}
+        className="py-12 bg-gradient-to-r from-neutral-50 to-white"
+      >
         <div className="main-padding">
           <div className="flex items-center ">
             <h3 className="header-iii">Languages Summary</h3>
@@ -545,6 +670,80 @@ const Home = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </div>
+      {/* 7 */}
+      <div className="pt-12 pb-5 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="main-padding">
+          <div className="flex items-center gap-x-5">
+            <div className="flex-1 h-[1px] bg-neutral-300" />
+            <div className="shrink-0 w-[20px] aspect-square border-[1px] border-neutral-300 rotate-45" />
+            <div className="flex-1 h-[1px] bg-neutral-300" />
+          </div>
+          {/* socials */}
+          <div className="flex items-center justify-center gap-x-5 mt-10">
+            {socialLinks.options.map((socialItem) => {
+              return (
+                <NavLink
+                  to={socialItem.path}
+                  key={socialItem.text}
+                  target="_blank"
+                  className={"relative"}
+                  onMouseEnter={() => {
+                    setSocialLinks((prev) => {
+                      return {
+                        ...prev,
+                        selected: socialItem.text,
+                      };
+                    });
+                  }}
+                  onMouseLeave={() => {
+                    setSocialLinks((prev) => {
+                      return {
+                        ...prev,
+                        selected: "",
+                      };
+                    });
+                  }}
+                >
+                  {/* icon */}
+                  <div>
+                    <socialItem.icon
+                      className={`text-lg ${
+                        socialItem.text === "GitHub"
+                          ? "text-emerald-600"
+                          : socialItem.text === "Linkedin"
+                          ? "text-blue-600"
+                          : "text-cyan-600"
+                      }`}
+                    />
+                  </div>
+                  {/* text */}
+                  <div
+                    className={`absolute left-1/2 text-xs rounded-md rounded-bl-none transition-transform ease-in-out duration-150  top-[-24px] px-1 py-0.5 text-white ${
+                      socialItem.text === "GitHub"
+                        ? "bg-emerald-600"
+                        : socialItem.text === "Linkedin"
+                        ? "bg-blue-600"
+                        : "bg-cyan-600"
+                    } ${
+                      socialLinks.selected === socialItem.text
+                        ? "scale-100"
+                        : "scale-0"
+                    }`}
+                  >
+                    <span>{socialItem.text}</span>
+                  </div>
+                </NavLink>
+              );
+            })}
+          </div>
+          <div className="flex items-center justify-center mt-5">
+            <p className="text-neutral-500">
+              Powered by{" "}
+              <span className="font-bold text-neutral-300">addis</span>
+            </p>
           </div>
         </div>
       </div>
