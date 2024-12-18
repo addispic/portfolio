@@ -34,6 +34,7 @@ import { FaGitAlt } from "react-icons/fa6";
 // collections
 import { IoIosWarning } from "react-icons/io";
 import { CiGlobe } from "react-icons/ci";
+import { FaFilePdf } from "react-icons/fa";
 
 // languages
 import { TbBrandJavascript } from "react-icons/tb";
@@ -49,6 +50,9 @@ import { TbSettingsCode } from "react-icons/tb";
 import { RiToolsLine } from "react-icons/ri";
 import { RiSlideshow3Line } from "react-icons/ri";
 import { PiCodeThin } from "react-icons/pi";
+
+// addis resume
+import addisResume from "../documents/addispic-resume.pdf";
 
 const Home = () => {
   // states
@@ -304,6 +308,19 @@ const Home = () => {
                 <span className="font-medium">Django</span> to build robust
                 back-end systems.
               </p>
+            </div>
+            <div className="my-3">
+              <a
+                className="w-max"
+                href={addisResume}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div className="flex items-center gap-x-1.5 px-2 py-1 rounded-sm bg-neutral-100 w-max transition-colors ease-in-out duration-150 hover:bg-neutral-200">
+                  <FaFilePdf className="text-red-600" />
+                  <span className="text-sm">My Resume</span>
+                </div>
+              </a>
             </div>
           </div>
           {/* right */}
