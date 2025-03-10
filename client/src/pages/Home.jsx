@@ -350,7 +350,7 @@ const Home = () => {
               </div>
               {/* intro */}
               <div className="max-w-52 text-sm text-neutral-500 italic text-center">
-                <p>Graduated from Bahir Dar University in 2022.</p>
+                <p>Graduated from Bahir Dar University</p>
               </div>
               {/* social links */}
               <div className="flex items-center justify-center gap-x-5 mt-3">
