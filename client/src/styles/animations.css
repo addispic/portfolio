@@ -1,0 +1,25 @@
+/* bubbles */
+.bubble {
+  display: flex;
+  gap: 0.05rem;
+}
+.bubble div {
+  width: 0.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color);
+  box-shadow: 0 0 1.5rem var(--color);
+  animation: grow 1.3s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes grow {
+  0%,
+  40%,
+  100% {
+    transform: scale(0.15);
+  }
+  20% {
+    transform: scale(1);
+  }
+}
