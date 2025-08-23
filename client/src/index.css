@@ -1,4 +1,17 @@
 @import "tailwindcss";
 
+/* colors */
+@import "./styles/colors.css";
+
 /* animations */
 @import "./styles/animations.css";
+
+/* hide default scroll bar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* con width */
+.con-width {
+  @apply max-w-5xl mx-auto px-0.5 sm:px-1 md:px-1.5 lg:px-3 xl:px-4;
+}

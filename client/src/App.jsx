@@ -1,12 +1,15 @@
+import { Routes, Route } from "react-router-dom";
 // components
-import Bubbles from "./components/loaders/Bubbles";
+import Header from "./components/Header";
+// pages
+import Home from "./pages/Home";
 const App = () => {
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-[#02030a]">
-      <div className="flex items-center justify-center gap-3 text-neutral-500 text-sm">
-        <p>Wait a bit</p>
-        <Bubbles />
-      </div>
+    <div className="w-screen h-screen overflow-x-hidden overflow-y-auto bg-dark-1 text-light-1">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
     </div>
   );
 };

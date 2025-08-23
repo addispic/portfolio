@@ -1,0 +1,8 @@
+/* site colors */
+@theme {
+  /* dark */
+  --color-dark-1: #010103;
+  --color-dark-2: #060606;
+  /* light */
+  --color-light-1: #919194;
+}
