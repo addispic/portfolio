@@ -1,3 +1,5 @@
+// icons
+import { SiSky } from "react-icons/si";
 export default function Projects() {
   return (
     <div className="mt-24">
@@ -8,6 +10,15 @@ export default function Projects() {
           necessitatibus sint perspiciatis tempore, saepe aspernatur autem
           corrupti nemo nam repudiandae nisi debitis non.
         </p>
+        <div className="flex items-center justify-center gap-16 mt-10">
+          {[1, 2, 3].map((item, index) => {
+            return (
+              <div className="max-w-52">
+                <div>Projects List</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

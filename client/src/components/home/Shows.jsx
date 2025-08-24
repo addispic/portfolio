@@ -92,8 +92,8 @@ export default function Shows() {
       type: "gradient",
       gradient: {
         shadeIntensity: 0,
-        opacityFrom: 0.5,
-        opacityTo: 0.25,
+        opacityFrom: 0.25,
+        opacityTo: 0.15,
         stops: [0, 100],
       },
     },
@@ -104,7 +104,7 @@ export default function Shows() {
       curve: "smooth",
       width: 1,
     },
-    colors: ["#10eb05", "#0455b8", "#eb0505"],
+    colors: ["#10eb05", "#575757", "#eb0505"],
 
     grid: {
       xaxis: {
@@ -133,7 +133,7 @@ export default function Shows() {
     legend: {
       show: true,
       labels: {
-        colors: ["#03a311", "#0455b8", "#eb0505"], // Change this to your desired text color
+        colors: ["#03a311", "#575757", "#eb0505"], // Change this to your desired text color
       },
       markers: {
         strokeColor: "transparent", // Makes the border transparent
