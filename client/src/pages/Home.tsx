@@ -2,6 +2,7 @@
 import Tools from "../components/home/Tools";
 import Software from "../components/home/Software";
 import Shows from "../components/home/Shows";
+import Projects from "../components/home/Projects";
 export default function Home() {
   return (
     <div>
@@ -23,6 +24,7 @@ export default function Home() {
       <Tools />
       <Software />
       <Shows />
+      <Projects />
     </div>
   );
 }

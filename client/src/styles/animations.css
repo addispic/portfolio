@@ -23,3 +23,26 @@
     transform: scale(1);
   }
 }
+
+/* swiper bullets */
+
+.latest-news-pagination-bullet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  margin-top: 3.5rem;
+}
+
+.latest-news-pagination-bullet .swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.25rem;
+  background: #d4022c;
+  border-radius: 1rem;
+  transition: all 1.5s ease-in-out;
+}
+
+.latest-news-pagination-bullet .swiper-pagination-bullet-active {
+  width: 1.25rem;
+}
