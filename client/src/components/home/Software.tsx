@@ -35,7 +35,7 @@ export default function Software() {
           />
         </div>
         <div>
-          <h3 className="uppercase w-max text-3xl relative after:absolute after:left-0 after:-bottom-1.5 after:h-[.1rem] after:w-[25%] after:rounded-full after:bg-pr cursor-pointer after:transition-all after:ease-in-out after:duration-300 hover:after:w-[50%]">
+          <h3 className="w-max text-lg sm:text-xl md:text-2xl lg:text-3xl relative after:absolute after:left-0 after:-bottom-1.5 after:h-[.1rem] after:w-[25%] after:rounded-full after:bg-pr cursor-pointer after:transition-all after:ease-in-out after:duration-300 hover:after:w-[50%]">
             Web & Mobile Solutions
           </h3>
           <p className="text-neutral-500 my-5">

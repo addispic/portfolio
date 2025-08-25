@@ -243,7 +243,14 @@ export default function Shows() {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>hello world 3</SwiperSlide>
+          <SwiperSlide>
+            <div className="w-full h-full ">
+              <header className="w-full px-3 py-3 text-center">
+                <h3 className="uppercase text-lg">Integration</h3>
+                <p className="text-neutral-700">APIs & SDK</p>
+              </header>
+            </div>
+          </SwiperSlide>
         </Swiper>
         <div className="latest-news-pagination-bullet w-full" />
       </div>
