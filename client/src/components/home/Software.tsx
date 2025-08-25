@@ -1,10 +1,16 @@
 import { useState } from "react";
+
 // icons
 import { FaLaptopCode } from "react-icons/fa";
 import { MdMobileFriendly } from "react-icons/md";
 import { TbPlugConnectedX } from "react-icons/tb";
 import { FiArrowRight } from "react-icons/fi";
-export default function Software() {
+
+export default function Software({
+  scrollHandler,
+}: {
+  scrollHandler: () => void;
+}) {
   // software
   const [software, _setSoftware] = useState(() => [
     {
@@ -23,6 +29,7 @@ export default function Software() {
       text: "Seamlessly integrating third-party APIs and SDKs to enhance functionality and streamline workflows.",
     },
   ]);
+
   return (
     <div className="mt-24">
       {/* content */}
@@ -47,7 +54,7 @@ export default function Software() {
             return (
               <div key={item.title} className="mt-5 flex items-center gap-5">
                 {/* icon */}
-                <div className="shrink-0 w-10 aspect-square rounded-full flex items-center justify-center bg-pr text-white">
+                <div className="shrink-0 w-10 aspect-square rounded-full flex items-center justify-center bg-pr/50 text-white">
                   <item.icon className="text-xl" />
                 </div>
                 {/* text */}
@@ -58,9 +65,12 @@ export default function Software() {
               </div>
             );
           })}
-          <button className="mt-7 w-max px-3 py-2 rounded-md text-neutral-600 border border-neutral-900 flex items-center gap-x-3 cursor-pointer overflow-hidden relative after:absolute after:left-0 after:top-0 after:h-full after:w-0 after:bg-pr after:transition-all after:ease-in-out after:duration-300 hover:after:w-full transition-colors ease-in-out duration-300 hover:border-pr hover:text-neutral-400">
-            <span className="uppercase text-sm relative z-20">Projects</span>
-            <FiArrowRight className="relative z-20 text-lg" />
+          <button
+            className="mt-7 w-max flex items-center gap-x-1.5 px-3 py-1 rounded-sm text-sm border border-neutral-900 text-neutral-600 transition-colors ease-in-out duration-300 hover:text-pr hover:border-pr cursor-pointer"
+            onClick={scrollHandler}
+          >
+            <span>Projects</span>
+            <FiArrowRight className="text-lg" />
           </button>
         </div>
       </div>
