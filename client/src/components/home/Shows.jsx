@@ -4,20 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import ReactApexChart from "react-apexcharts";
 // icons
-import { GrHtml5 } from "react-icons/gr";
-import { IoLogoCss3 } from "react-icons/io";
-import { TbBrandJavascript } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa";
-import { FaDocker } from "react-icons/fa";
-import { SiAdobephotoshop } from "react-icons/si";
-import { BiLogoTypescript } from "react-icons/bi";
+
+// components
+import ChatGemini from "./ChatGemini";
 
 // css
 import "swiper/css";
@@ -147,7 +140,7 @@ export default function Shows() {
         <Swiper
           modules={[Pagination, Autoplay]}
           slidesPerView={3}
-          spaceBetween={25}
+          spaceBetween={30}
           loop={true}
           speed={5000}
           autoplay={{
@@ -160,15 +153,15 @@ export default function Shows() {
           breakpoints={{
             0: {
               slidesPerView: 1,
-              spaceBetween: 5,
+              spaceBetween: 10,
             },
             480: {
               slidesPerView: 2,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
             728: {
               slidesPerView: 3,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
           }}
           className="w-full"
@@ -243,12 +236,14 @@ export default function Shows() {
               </div>
             </div>
           </SwiperSlide>
+          {/* api & sdk */}
           <SwiperSlide>
             <div className="w-full h-full ">
               <header className="w-full px-3 py-3 text-center">
                 <h3 className="uppercase text-lg">Integration</h3>
                 <p className="text-neutral-700">APIs & SDK</p>
               </header>
+              <ChatGemini />
             </div>
           </SwiperSlide>
         </Swiper>
