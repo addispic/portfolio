@@ -110,11 +110,10 @@ export default function Tools() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0, skewY: -15 }}
+      initial={{ opacity: 0 }}
       whileInView={{
         opacity: 1,
-        scale: 1,
-        skewY: 0,
+
         transition: {
           delay: 5,
           duration: 1.5,

@@ -85,7 +85,7 @@ export default function Software({
   };
 
   return (
-    <div className="mt-36">
+    <div className="mt-12 sm:mt-24 md:mt-36">
       {/* content */}
       <motion.div
         variants={fv}
@@ -95,7 +95,7 @@ export default function Software({
       >
         <motion.div
           variants={sv1}
-          className="h-full overflow-hidden rounded-xl"
+          className="h-full overflow-hidden rounded-xl  relative z-0"
         >
           <img
             className="w-full h-full object-center object-cover"
@@ -103,7 +103,12 @@ export default function Software({
             alt=""
           />
         </motion.div>
-        <motion.div variants={sv2} initial={"hidden"} whileInView={"visible"}>
+        <motion.div
+          variants={sv2}
+          initial={"hidden"}
+          whileInView={"visible"}
+          className=" relative z-20"
+        >
           <motion.h3
             variants={tv}
             className="w-max text-lg sm:text-xl md:text-2xl lg:text-3xl relative after:absolute after:left-0 after:-bottom-1.5 after:h-[.1rem] after:w-[25%] after:rounded-full after:bg-pr cursor-pointer after:transition-all after:ease-in-out after:duration-300 hover:after:w-[50%]"

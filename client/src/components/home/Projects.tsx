@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { delay, motion } from "motion/react";
+import { motion } from "motion/react";
+import type { Variants } from "motion/react";
 // icons
 import { SiSky } from "react-icons/si";
 import { PiLinkSimpleFill } from "react-icons/pi";
@@ -28,6 +29,35 @@ export default function Projects() {
       url: "",
     },
   ]);
+
+  const v1: Variants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 1,
+        staggerChildren: 1.5,
+      },
+    },
+  };
+
+  const v2: Variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0,
+      x: 32,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      transition: {
+        duration: 1.5,
+      },
+    },
+  };
 
   return (
     <div className="mt-24">
@@ -68,10 +98,16 @@ export default function Projects() {
           including React, Next.js, Express, MongoDB, Tailwind CSS, and
           Socket.IO.
         </motion.p>
-        <div className="flex items-center justify-center gap-16 mt-10">
+        <motion.div
+          variants={v1}
+          initial={"hidden"}
+          whileInView={"visible"}
+          className="flex items-center justify-center gap-16 mt-10"
+        >
           {projects.map((item, index) => {
             return (
-              <div
+              <motion.div
+                variants={v2}
                 key={item.title}
                 className="max-w-52 flex flex-col items-center justify-center"
               >
@@ -105,10 +141,10 @@ export default function Projects() {
                 >
                   <LuArrowRight />
                 </button>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

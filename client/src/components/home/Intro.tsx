@@ -29,6 +29,7 @@ export default function Intro() {
       transition: {
         delay: 1,
         duration: 1.5,
+        ease: "easeInOut",
       },
     },
   };
@@ -101,16 +102,16 @@ export default function Intro() {
         variants={fpv}
         initial="hidden"
         whileInView="visible"
-        className="con-width py-32 relative"
+        className="con-width py-32 relative  overflow-y-hidden"
       >
         {/* image */}
         <motion.div
           variants={fcv}
-          className="absolute h-full w-[65%] transition-all ease-in-out duration-300 left-0 overflow-hidden top-0 md:left-auto -ml-44 md:right-0"
+          className="absolute h-full w-[65%] transition-all ease-in-out duration-300 left-0 overflow-hidden top-0 md:left-auto -ml-36 sm:-ml-44 md:right-0"
         >
           <img
             className="w-full h-full object-center object-cover"
-            src="/images/personal/adisie-fenta-1.jpg"
+            src="/images/personal/addisfun4.jpg"
             alt="adisie fenta shiferaw"
           />
         </motion.div>
@@ -119,7 +120,7 @@ export default function Intro() {
           variants={spv}
           initial={"hidden"}
           whileInView={"visible"}
-          className="relative z-10 ml-40 md:ml-0"
+          className="relative z-10 ml-24 sm:ml-40 md:ml-0"
         >
           <motion.h3
             variants={scv}
