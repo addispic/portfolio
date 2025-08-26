@@ -28,7 +28,7 @@ export default function Intro() {
       scale: 1,
       transition: {
         delay: 1,
-        duration: 1.5,
+        duration: 5,
         ease: "easeInOut",
       },
     },
@@ -102,14 +102,12 @@ export default function Intro() {
         variants={fpv}
         initial="hidden"
         whileInView="visible"
-        className="con-width py-32 relative  overflow-y-hidden"
+        className="con-width py-32 relative "
       >
         {/* image */}
-        <motion.div
-          variants={fcv}
-          className="absolute h-full w-[65%] transition-all ease-in-out duration-300 left-0 overflow-hidden top-0 md:left-auto -ml-36 sm:-ml-44 md:right-0"
-        >
-          <img
+        <motion.div className="absolute h-full w-[65%] transition-all ease-in-out duration-300 left-0 overflow-hiddenx top-0 md:left-auto -ml-36 sm:-ml-44 md:right-0">
+          <motion.img
+            variants={fcv}
             className="w-full h-full object-center object-cover"
             src="/images/personal/addisfun4.jpg"
             alt="adisie fenta shiferaw"
@@ -133,39 +131,33 @@ export default function Intro() {
           </motion.h3>
           <motion.p
             variants={scv}
-            className="sm:text-lg md:text-xl lg:text-xl my-3 gradient-green-prupple w-max font-bold"
+            className="sm:text-lg md:text-xl lg:text-xl my-3 w-max font-bold"
           >
             TypeScript Developer
           </motion.p>
           <motion.p variants={scv} className="md:max-w-[55%] text-neutral-600">
-            Software developer skilled in building scalable web and mobile apps
-            — from{" "}
-            <span className="uppercase font-bold gradient-red-blue">
-              polished
-            </span>{" "}
-            UI design with Tailwind CSS to dynamic animations using{" "}
-            <span className="gradient-green-prupple font-medium">
-              Framer Motion
-            </span>
-            .
+            Experienced in building scalable web and mobile apps — from simple
+            sites to advanced TypeScript solutions. Skilled in full-stack
+            development (API design & integration) and creating responsive UIs
+            using Tailwind CSS & Shadcn.
           </motion.p>
           <motion.div
             variants={scv}
             // initial={"hidden"}
             // whileInView={"visible"}
-            className="mt-7 flex items-center gap-1.5 sm:gap-3 md:gap-5 lg:gap-7 xl:gap-10 "
+            className="mt-7 flex items-center gap-1.5 sm:gap-3 md:gap-5 lg:gap-7 "
           >
             {contact.map((item, index) => {
               return (
                 <motion.button
                   variants={bcv}
                   key={item.text}
-                  className={`flex items-center gap-x-1  sm:gap-x-2 md:gap-x-3 border px-1 sm:px-2 md:px-3 py-1 rounded-md transition-colors ease-in-out duration-300 cursor-pointer ${
+                  className={`flex items-center gap-x-1  sm:gap-x-2 md:gap-x-3 border px-1 sm:px-2 md:px-3 py-1 rounded-md transition-colors ease-in-out duration-300 cursor-pointer text-neutral-700 ${
                     index === 0
-                      ? "text-sky-500/50 border-transparent hover:border-sky-500/40 hover:text-sky-500"
+                      ? " border-transparent hover:border-sky-500/40 hover:text-sky-500"
                       : index === 1
-                      ? "text-green-500/50 border-transparent hover:border-green-500/40 hover:text-green-500"
-                      : "text-blue-500/50 border-transparent hover:border-blue-500/40 hover:text-blue-500"
+                      ? " border-transparent hover:border-green-500/40 hover:text-green-600"
+                      : " border-transparent hover:border-blue-500/40 hover:text-blue-500"
                   }`}
                 >
                   <item.icon />

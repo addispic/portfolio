@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 // icons
-import { SiSky } from "react-icons/si";
+import { FaBalanceScaleLeft } from "react-icons/fa";
 import { PiLinkSimpleFill } from "react-icons/pi";
 import { FaSquareGithub } from "react-icons/fa6";
 import { LuArrowRight } from "react-icons/lu";
@@ -11,16 +11,16 @@ export default function Projects() {
   // local
   const [projects, setProjects] = useState(() => [
     {
-      icon: SiSky,
-      title: "SkyTech",
-      text: "Skylight Technologies Company's website",
-      url: "https://www.skylightethiopia.com",
-    },
-    {
       icon: PiLinkSimpleFill,
       title: "ETBLink",
       text: "Connecting Ethiopian Businesses and Opportunities",
       url: "https://etblink.com",
+    },
+    {
+      icon: FaBalanceScaleLeft,
+      title: "MAKUTA",
+      text: "Law Management System In Ethiopia",
+      url: "https://www.makutalawfirm.com",
     },
     {
       icon: FaSquareGithub,
@@ -92,7 +92,7 @@ export default function Projects() {
               delay: 1,
             },
           }}
-          className="mt-10 max-w-3xl mx-auto text-center"
+          className="mt-10 max-w-3xl mx-auto text-center text-neutral-600"
         >
           Some of the projects I’ve worked on, using various technologies
           including React, Next.js, Express, MongoDB, Tailwind CSS, and

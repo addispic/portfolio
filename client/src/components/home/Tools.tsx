@@ -113,13 +113,12 @@ export default function Tools() {
       initial={{ opacity: 0 }}
       whileInView={{
         opacity: 1,
-
         transition: {
           delay: 5,
           duration: 1.5,
         },
       }}
-      className="bg-dark-2 mt-5"
+      className="bg-dark-2 mt-7"
     >
       <div className="con-width py-3 relative">
         {/* left */}

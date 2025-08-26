@@ -46,14 +46,16 @@ export default function Software({
   };
   const sv1: Variants = {
     hidden: {
-      scaleX: 0,
+      // scaleX: 0,
       originX: 0,
+      x: "-100vw",
     },
     visible: {
       originX: 0,
-      scaleX: 1,
+      // scaleX: 1,
+      x: 0,
       transition: {
-        duration: 1.5,
+        duration: 3.5,
       },
     },
   };
@@ -93,13 +95,11 @@ export default function Software({
         whileInView={"visible"}
         className="con-width grid grid-cols-1 md:grid-cols-2 gap-12"
       >
-        <motion.div
-          variants={sv1}
-          className="h-full overflow-hidden rounded-xl  relative z-0"
-        >
-          <img
+        <motion.div className="h-full overflow-hidden rounded-3xl rounded-tr-none rounded-bl-none  relative z-0">
+          <motion.img
+            variants={sv1}
             className="w-full h-full object-center object-cover"
-            src="/images/personal/dark-fixed.jpg"
+            src="/images/personal/software-i.jpg"
             alt=""
           />
         </motion.div>

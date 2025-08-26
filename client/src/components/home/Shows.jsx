@@ -160,6 +160,8 @@ export default function Shows() {
           speed={5000}
           autoplay={{
             delay: 5000,
+            pauseOnMouseEnter: true, // Pauses autoplay on hover
+            disableOnInteraction: false, // Keeps autoplay running after interaction
           }}
           pagination={{
             clickable: true,
@@ -193,7 +195,7 @@ export default function Shows() {
                   <div className="shrink-0 w-12 aspect-square rounded-full overflow-hidden">
                     <img
                       className="w-full object-center object-cover"
-                      src="/images/personal/addis-i.jpg"
+                      src="/images/personal/addis-i (2).jpg"
                       alt=""
                     />
                   </div>

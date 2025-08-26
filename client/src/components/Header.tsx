@@ -41,7 +41,7 @@ export default function Header() {
           variants={cv}
           className="text-lg sm:text-xl md:text-xl font-medium text-neutral-700"
         >
-          addis<span className="font-black gradient-red-blue">pic</span>
+          addis<span className="font-black text-pr cursor-pointer">pic</span>
         </motion.h3>
         <motion.button
           variants={cv}
