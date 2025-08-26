@@ -108,7 +108,7 @@ export default function Tools() {
   ]);
 
   return (
-    <div className="bg-dark-2 mt-12">
+    <div className="bg-dark-2 mt-20">
       <div className="con-width py-3 relative">
         {/* left */}
         {/* <div className="absolute left-0 top-0 w-24 z-20 h-full bg-gradient-to-r from-dark-2 to-transparent" /> */}
