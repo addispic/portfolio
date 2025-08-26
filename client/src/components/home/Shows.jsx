@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { motion } from "motion/react";
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -134,8 +135,22 @@ export default function Shows() {
       },
     },
   };
+
   return (
-    <div className="mt-24">
+    <motion.div
+      initial={{
+        scale: 0,
+        opacity: 0,
+      }}
+      whileInView={{
+        scale: 1,
+        opacity: 1,
+        transition: {
+          duration: 1.5,
+        },
+      }}
+      className="mt-24"
+    >
       <div className="con-width">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -250,6 +265,6 @@ export default function Shows() {
         </Swiper>
         <div className="latest-news-pagination-bullet w-full" />
       </div>
-    </div>
+    </motion.div>
   );
 }

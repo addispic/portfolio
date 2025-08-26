@@ -28,7 +28,7 @@ export default function Intro() {
       scale: 1,
       transition: {
         delay: 1,
-        duration: 3,
+        duration: 1.5,
       },
     },
   };
@@ -136,7 +136,7 @@ export default function Intro() {
           >
             TypeScript Developer
           </motion.p>
-          <motion.p variants={scv} className="md:max-w-[50%] text-neutral-600">
+          <motion.p variants={scv} className="md:max-w-[55%] text-neutral-600">
             Software developer skilled in building scalable web and mobile apps
             — from{" "}
             <span className="uppercase font-bold gradient-red-blue">

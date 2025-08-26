@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { delay, motion } from "motion/react";
 // icons
 import { SiSky } from "react-icons/si";
 import { PiLinkSimpleFill } from "react-icons/pi";
@@ -32,15 +33,41 @@ export default function Projects() {
     <div className="mt-24">
       <div className="con-width">
         <div className="flex items-center justify-center">
-          <h3 className="text-center w-max text-lg sm:text-xl md:text-2xl lg:text-3xl relative after:absolute after:left-0 after:-bottom-1.5 after:h-[.1rem] after:w-[25%] after:rounded-full after:bg-pr cursor-pointer after:transition-all after:ease-in-out after:duration-300 hover:after:w-[50%]">
+          <motion.h3
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                duration: 1.5,
+                // type: "spring",
+                // stiffness: 70,
+              },
+            }}
+            className="text-center w-max text-lg sm:text-xl md:text-2xl lg:text-3xl relative after:absolute after:left-0 after:-bottom-1.5 after:h-[.1rem] after:w-[25%] after:rounded-full after:bg-pr cursor-pointer after:transition-all after:ease-in-out after:duration-300 hover:after:w-[50%]"
+          >
             Projects
-          </h3>
+          </motion.h3>
         </div>
-        <p className="mt-10 max-w-3xl mx-auto text-center">
+        <motion.p
+          initial={{
+            scale: 0,
+            opacity: 0,
+          }}
+          whileInView={{
+            scale: 1,
+            opacity: 1,
+            transition: {
+              duration: 1.5,
+              delay: 1,
+            },
+          }}
+          className="mt-10 max-w-3xl mx-auto text-center"
+        >
           Some of the projects I’ve worked on, using various technologies
           including React, Next.js, Express, MongoDB, Tailwind CSS, and
           Socket.IO.
-        </p>
+        </motion.p>
         <div className="flex items-center justify-center gap-16 mt-10">
           {projects.map((item, index) => {
             return (

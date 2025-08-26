@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react";
 
 // icons
 import { GrHtml5 } from "react-icons/gr";
@@ -108,7 +109,19 @@ export default function Tools() {
   ]);
 
   return (
-    <div className="bg-dark-2 mt-20">
+    <motion.div
+      initial={{ opacity: 0, scale: 0, skewY: -15 }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        skewY: 0,
+        transition: {
+          delay: 5,
+          duration: 1.5,
+        },
+      }}
+      className="bg-dark-2 mt-5"
+    >
       <div className="con-width py-3 relative">
         {/* left */}
         {/* <div className="absolute left-0 top-0 w-24 z-20 h-full bg-gradient-to-r from-dark-2 to-transparent" /> */}
@@ -135,6 +148,6 @@ export default function Tools() {
           })}
         </Marquee>
       </div>
-    </div>
+    </motion.div>
   );
 }
