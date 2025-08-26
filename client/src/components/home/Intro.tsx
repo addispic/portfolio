@@ -24,9 +24,17 @@ export default function Intro() {
   ]);
   return (
     <div>
-      <div className="con-width py-32">
+      <div className="con-width py-32 relative">
+        {/* image */}
+        <div className="absolute h-full w-[65%] overflow-hidden top-0 right-0">
+          <img
+            className="w-full h-full object-center object-cover"
+            src="/images/personal/adisie-fenta-1.jpg"
+            alt="adisie fenta shiferaw"
+          />
+        </div>
         {/* inro tex */}
-        <div>
+        <div className="relative z-10">
           <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
             I'm a{" "}
             <span className="font-black gradient-red-blue">
