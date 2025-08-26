@@ -31,7 +31,7 @@ export default function Software({
   ]);
 
   return (
-    <div className="mt-24">
+    <div className="mt-36">
       {/* content */}
       <div className="con-width grid grid-cols-2 gap-12">
         <div className="h-full overflow-hidden rounded-xl">

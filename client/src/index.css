@@ -15,3 +15,19 @@
 .con-width {
   @apply max-w-5xl mx-auto px-1.5 sm:px-3 md:px-4 lg:px-5 xl:px-7;
 }
+
+/* gradient text */
+.gradient-red-blue {
+  background: linear-gradient(45deg, #aa1313, #0047b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-green-prupple {
+  background: linear-gradient(45deg, #035314, #2f12d3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

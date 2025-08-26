@@ -166,23 +166,6 @@ export default function Shows() {
           }}
           className="w-full"
         >
-          {/* statics */}
-          <SwiperSlide>
-            <div className="w-full ">
-              <header className="w-full px-3 py-3 text-center">
-                <h3 className="uppercase text-lg">Data</h3>
-                <p className="text-neutral-700">Display & Analytics</p>
-              </header>
-              <div className="bg-dark-4 rounded-md overflow-hidden">
-                <ReactApexChart
-                  series={series}
-                  options={options}
-                  type="area"
-                  height={300}
-                />
-              </div>
-            </div>
-          </SwiperSlide>
           {/* motion */}
           <SwiperSlide>
             <div className="w-full h-full ">
@@ -236,6 +219,24 @@ export default function Shows() {
               </div>
             </div>
           </SwiperSlide>
+          {/* statics */}
+          <SwiperSlide>
+            <div className="w-full ">
+              <header className="w-full px-3 py-3 text-center">
+                <h3 className="uppercase text-lg">Data</h3>
+                <p className="text-neutral-700">Display & Analytics</p>
+              </header>
+              <div className="bg-dark-4 rounded-md overflow-hidden">
+                <ReactApexChart
+                  series={series}
+                  options={options}
+                  type="area"
+                  height={300}
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+
           {/* api & sdk */}
           <SwiperSlide>
             <div className="w-full h-full ">
