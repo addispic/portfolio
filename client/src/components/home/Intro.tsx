@@ -102,7 +102,7 @@ export default function Intro() {
         variants={fpv}
         initial="hidden"
         whileInView="visible"
-        className="con-width py-32 relative "
+        className="con-width py-24 md:py-32 relative "
       >
         {/* image */}
         <motion.div className="absolute h-full w-[65%] transition-all ease-in-out duration-300 left-0 overflow-hiddenx top-0 md:left-auto -ml-36 sm:-ml-44 md:right-0">
