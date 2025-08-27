@@ -83,7 +83,7 @@ export default function Intro() {
     {
       icon: FaTelegramPlane,
       text: "Telegram",
-      url: "",
+      url: "https://t.me/adisie_fenta",
     },
     {
       icon: MdMarkEmailRead,
@@ -136,7 +136,7 @@ export default function Intro() {
             TypeScript Developer
           </motion.p>
           <motion.p variants={scv} className="md:max-w-[55%] text-neutral-600">
-            Experienced in building scalable web and mobile apps — from simple
+            Experienced in building scalable web and mobile apps. From simple
             sites to advanced TypeScript solutions. Skilled in full-stack
             development (API design & integration) and creating responsive UIs
             using Tailwind CSS & Shadcn.
@@ -159,6 +159,9 @@ export default function Intro() {
                       ? " border-transparent hover:border-green-500/40 hover:text-green-600"
                       : " border-transparent hover:border-blue-500/40 hover:text-blue-500"
                   }`}
+                  onClick={() => {
+                    window.open(item.url, "_blank");
+                  }}
                 >
                   <item.icon />
                   <span>{item.text}</span>
