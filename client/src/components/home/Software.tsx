@@ -99,7 +99,7 @@ export default function Software({
           <motion.img
             variants={sv1}
             className="w-full h-full object-center object-cover"
-            src="/images/personal/software-i.jpg"
+            src="/images/personal/software-iii.jpg"
             alt=""
           />
         </motion.div>

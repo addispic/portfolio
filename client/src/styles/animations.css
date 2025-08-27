@@ -1,4 +1,21 @@
 /* bubbles */
+.bubbles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.bubbles div {
+  width: 0.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color);
+  box-shadow: 0 0 0.5rem var(--color);
+  animation: grow 1.3s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
 .bubble {
   display: flex;
   gap: 0.05rem;

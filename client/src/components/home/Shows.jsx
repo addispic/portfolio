@@ -12,6 +12,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 
 // components
 import ChatGemini from "./ChatGemini";
+import MotionShow from "./MotionShow";
 
 // css
 import "swiper/css";
@@ -190,50 +191,63 @@ export default function Shows() {
                 <h3 className="uppercase text-lg">Framer</h3>
                 <p className="text-neutral-700">Motion & Animation</p>
               </header>
-              <div className="px-3 py-1.5 rounded-md overflow-hidden bg-dark-4 text-neutral-400">
-                <div className="flex items-center gap-3 mb-2 pb-2.5 border-b border-neutral-900">
-                  <div className="shrink-0 w-12 aspect-square rounded-full overflow-hidden">
-                    <img
-                      className="w-full object-center object-cover"
-                      src="/images/personal/addis-i (2).jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div>
-                    <h3 className="mb-1 text-neutral-400 text-sm">
-                      Adisie Fenta Shiferaw
-                    </h3>
-                    <p className="text-xs bg-neutral-400 text-neutral-900 rounded-full px-3 py-1 w-max">
-                      Software Engineer
-                    </p>
-                  </div>
-                </div>
-                <h3 className="font-medium mb-1 text-neutral-500">
-                  Tools & Technologies
-                </h3>
-                {tools.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 ml-3 mb-2"
-                    >
-                      {/* icon */}
-                      <div className="w-8 text-pr aspect-square rounded-full flex items-center justify-center bg-neutral-900/50">
-                        <item.icon />
-                      </div>
-                      {/* text */}
-                      <div>
-                        <h3 className="text-neutral-400 text-sm">
-                          {item.title}
-                        </h3>
-                        <p className="text-xs text-neutral-400 bg-pr w-max px-3 py-1 rounded-sm">
-                          {item.text}
-                        </p>
-                      </div>
+              {true ? (
+                <MotionShow />
+              ) : (
+                <div
+                  id="ddd"
+                  onClick={() => {
+                    let element = document.getElementById("ddd");
+                    if (element) {
+                      alert(window.getComputedStyle(element).height);
+                    }
+                  }}
+                  className="px-3 py-1.5 rounded-md overflow-hidden bg-dark-4 text-neutral-400"
+                >
+                  <div className="flex items-center gap-3 mb-2 pb-2.5 border-b border-neutral-900">
+                    <div className="shrink-0 w-12 aspect-square rounded-full overflow-hidden">
+                      <img
+                        className="w-full object-center object-cover"
+                        src="/images/personal/addis-i (2).jpg"
+                        alt=""
+                      />
                     </div>
-                  );
-                })}
-              </div>
+                    <div>
+                      <h3 className="mb-1 text-neutral-400 text-sm">
+                        Adisie Fenta Shiferaw
+                      </h3>
+                      <p className="text-xs bg-neutral-400 text-neutral-900 rounded-full px-3 py-1 w-max">
+                        Software Engineer
+                      </p>
+                    </div>
+                  </div>
+                  <h3 className="font-medium mb-1 text-neutral-500">
+                    Tools & Technologies
+                  </h3>
+                  {tools.map((item, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 ml-3 mb-2"
+                      >
+                        {/* icon */}
+                        <div className="w-8 text-pr aspect-square rounded-full flex items-center justify-center bg-neutral-900/50">
+                          <item.icon />
+                        </div>
+                        {/* text */}
+                        <div>
+                          <h3 className="text-neutral-400 text-sm">
+                            {item.title}
+                          </h3>
+                          <p className="text-xs text-neutral-400 bg-pr w-max px-3 py-1 rounded-sm">
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </SwiperSlide>
           {/* statics */}

@@ -13,7 +13,7 @@ export default function Projects() {
     {
       icon: PiLinkSimpleFill,
       title: "ETBLink",
-      text: "Connecting Ethiopian Businesses and Opportunities",
+      text: "Connecting Businesses and Opportunities",
       url: "https://etblink.com",
     },
     {
@@ -102,14 +102,14 @@ export default function Projects() {
           variants={v1}
           initial={"hidden"}
           whileInView={"visible"}
-          className="flex items-center justify-center gap-16 mt-10"
+          className="grid grid-cols-2 sm:grid-cols-3 max-w-2xl mx-auto gap-7 sm:gap-16 mt-10"
         >
           {projects.map((item, index) => {
             return (
               <motion.div
                 variants={v2}
                 key={item.title}
-                className="max-w-52 flex flex-col items-center justify-center"
+                className="max-w-52 flex flex-col items-center justify-center last:col-span-2 sm:last:col-span-1 last:max-w-[100%]  sm:last:max-w-52"
               >
                 <item.icon
                   className={`text-3xl ${
