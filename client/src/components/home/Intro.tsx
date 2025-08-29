@@ -5,7 +5,13 @@ import type { Variants } from "motion/react";
 import { FaTelegramPlane } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 import { IoLogoLinkedin } from "react-icons/io5";
+// hooks
+import { useAppDispatch } from "../../hooks";
+// slices
+import { newUpdate } from "../../features/trackers/trackers.slice";
 export default function Intro() {
+  // hooks
+  const dispatch = useAppDispatch();
   const fpv: Variants = {
     hidden: {
       opacity: 0,
@@ -96,6 +102,10 @@ export default function Intro() {
       url: "",
     },
   ]);
+  // handlers
+  const newUpdateHandler = (flag: number) => {
+    dispatch(newUpdate(flag));
+  };
   return (
     <div>
       <motion.div
@@ -160,6 +170,7 @@ export default function Intro() {
                       : " border-transparent hover:border-blue-500/40 hover:text-blue-500"
                   }`}
                   onClick={() => {
+                    newUpdateHandler(index + 1);
                     window.open(item.url, "_blank");
                   }}
                 >

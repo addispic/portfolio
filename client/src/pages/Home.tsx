@@ -1,7 +1,12 @@
 import { useRef, useEffect, useState } from "react";
+// hooks
+import { useAppDispatch } from "../hooks";
+// slices
+import { newUpdate } from "../features/trackers/trackers.slice";
 // components
 import Header from "../components/Header";
 import SiteLoader from "../components/loaders/SiteLoader";
+
 // home-components
 import Intro from "../components/home/Intro";
 import Tools from "../components/home/Tools";
@@ -12,8 +17,12 @@ import Contact from "../components/home/Contact";
 
 export default function Home() {
   const [siteLoading, setSiteLoading] = useState(true);
+
   // refs
   const projectsRef = useRef<HTMLDivElement | null>(null);
+
+  // hooks
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,6 +30,10 @@ export default function Home() {
     }, 4000);
 
     return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
+
+  useEffect(() => {
+    dispatch(newUpdate(0));
   }, []);
 
   // scroll handler

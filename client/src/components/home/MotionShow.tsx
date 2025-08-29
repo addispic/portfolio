@@ -47,6 +47,7 @@ export default function MotionShow() {
         if (item === "_image") {
           return (
             <motion.div
+              key={"_image"}
               initial={{
                 left: 0,
                 top: 0,
@@ -93,6 +94,7 @@ export default function MotionShow() {
         } else if (item === "_name") {
           return (
             <motion.div
+              key={"_name"}
               initial={{
                 x: 64,
                 scale: 0,
@@ -130,6 +132,7 @@ export default function MotionShow() {
         } else if (item === "_line") {
           return (
             <motion.div
+              key={"_line"}
               initial={{
                 scaleX: 0,
                 originX: 0,
@@ -163,6 +166,7 @@ export default function MotionShow() {
         } else if (item === "_intro") {
           return (
             <motion.p
+              key={"_intro"}
               initial={{
                 x: 64,
                 scale: 0,
@@ -200,6 +204,7 @@ export default function MotionShow() {
         } else if (item === "_btn") {
           return (
             <motion.div
+              key={"_btn"}
               initial={{
                 x: 64,
                 scale: 0,
