@@ -40,6 +40,7 @@ export default function Header() {
   // handlers
   const newUpdateHandler = (flag: number) => {
     dispatch(newUpdate(1));
+
   };
   return (
     <header>
@@ -60,7 +61,7 @@ export default function Header() {
           className="flex items-center gap-x-1.5 px-3 py-1 rounded-sm text-sm border border-neutral-900 text-neutral-600 transition-colors ease-in-out duration-300 hover:text-pr hover:border-pr cursor-pointer"
           onClick={() => {
             newUpdateHandler(1);
-            window.open("https://t.me/adisie_fenta", "_blank");
+            // window.open("https://t.me/adisie_fenta", "_blank");
           }}
         >
           <IoIosChatboxes className="text-lg" />
