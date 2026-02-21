@@ -1,8 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-// hooks
-import { useAppDispatch } from "../hooks";
-// slices
-import { newUpdate } from "../features/trackers/trackers.slice";
+
 // components
 import Header from "../components/Header";
 import SiteLoader from "../components/loaders/SiteLoader";
@@ -21,19 +18,12 @@ export default function Home() {
   // refs
   const projectsRef = useRef<HTMLDivElement | null>(null);
 
-  // hooks
-  const dispatch = useAppDispatch();
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setSiteLoading(false);
     }, 4000);
 
     return () => clearTimeout(timer); // Cleanup on unmount
-  }, []);
-
-  useEffect(() => {
-    dispatch(newUpdate(0));
   }, []);
 
   // scroll handler
